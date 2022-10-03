@@ -1,47 +1,47 @@
 Name,Duration,Wind speed,Pressure,Areas affected,Deaths,Damage,REf,Category
-Cuba,"October 19, 2024",165msngmph (270 km/h),910 hPa (26.87 inHg),"Central America, Mexico, Cuba, Florida, The Bahamas",90,,[12][13],5
+Cuba,19-Oct-24,165msngmph (270 km/h),910 hPa (26.87 inHg),"Central America, Mexico, Cuba, Florida, The Bahamas",90,,[12][13],5
 San Felipe,"September 13-14, 1928",160 mph (260 km/h),929 hPa (27.43 inHg),"Lesser Antilles, The Bahamas,United States East Coast, Atlantic Canada",4000,$100 million,[14],5
 Bahamas,"September 5-6, 1932",160 mph (260 km/h),921 hPa (27.20 inHg),"The Bahamas, Northeastern United States",16,,[15],5
 Camaguey,"November 5-8, 1932",175 mph (280 km/h),915 hPa (27.02 inHg),"Lesser Antilles, Jamaica, Cayman Islands, Cuba, The Bahamas, Bermuda",3103,$40 million,[16],5
-Brownsville,"August 30, 1933",160 mph (260 km/h),930 hPa (27.46 inHg),"The Bahamas, Cuba, Florida, Texas, Tamaulipas",179,$$27.9 million,[17],5
-Tampico,"September 21, 1933",160 mph (260 km/h),929 hPa (27.43 inHg),"Jamaica, Yucatin Peninsula",184,$5 million,[18],5
-Labor Day,"September 3, 1935",185 mph (295 km/h),892 hPa (26.34 inHg),"The Bahamas, Florida, Georgia, The Carolinas, Virginia",408,,[19],5
+Brownsville,30-Aug-33,160 mph (260 km/h),930 hPa (27.46 inHg),"The Bahamas, Cuba, Florida, Texas, Tamaulipas",179,$$27.9 million,[17],5
+Tampico,21-Sep-33,160 mph (260 km/h),929 hPa (27.43 inHg),"Jamaica, Yucatin Peninsula",184,$5 million,[18],5
+Labor Day,3-Sep-35,185 mph (295 km/h),892 hPa (26.34 inHg),"The Bahamas, Florida, Georgia, The Carolinas, Virginia",408,,[19],5
 New England,"September 19-20, 1938",160 mph (260 km/h),940 hPa (27.76 inHg),"Eastern United States, Southwestern Quebec",682,$306 million,[20],5
-Carol,"September 3, 1953",160 mph (260 km/h),929 hPa (27.43 inHg),"Bermuda, New England, Atlantic Canada",5,$2 million,[21],5
+Carol,3-Sep-53,160 mph (260 km/h),929 hPa (27.43 inHg),"Bermuda, New England, Atlantic Canada",5,$2 million,[21],5
 Janet,"September 27-28, 1955",175 mph (280 km/h),914 hPa (26.99 inHg),"Lesser Antilles, Central America",1023,$65.8 million,[22],5
-Esther,"September 17, 1961",160 mph (260 km/h),919 hPa (27.14 inHg),East Coast of the United States,7,$6 million,[23],5
-Hattie,"October 31, 1961",165 mph (270 km/h),914 hPa (26.99 inHg),Central America,319,$60.3 million,[24][25],5
+Esther,17-Sep-61,160 mph (260 km/h),919 hPa (27.14 inHg),East Coast of the United States,7,$6 million,[23],5
+Hattie,31-Oct-61,165 mph (270 km/h),914 hPa (26.99 inHg),Central America,319,$60.3 million,[24][25],5
 Inez,"September 28-29, 1966",165 mph (270 km/h),927 hPa (27.37 inHg),"Greater Antilles, Florida, Mexico",756,$229 million,[26],5
-Beulah,"September 20, 1967",160 mph (260 km/h),921 hPa (27.20 inHg),"The Caribbean, Mexico, Texas",59,$208 million,[27],5
+Beulah,20-Sep-67,160 mph (260 km/h),921 hPa (27.20 inHg),"The Caribbean, Mexico, Texas",59,$208 million,[27],5
 Camille,"August 16-18, 1969  ",175 mph (280 km/h),900 hPa (26.58 inHg),"Cuba, United States Gulf Coast",259,$1.42 billion,[28],5
-Edith,"September 9, 1971",160 mph (260 km/h),943 hPa (27.85 inHg),"The Caribbean, Central America, Mexico, United States Gulf Coast",37,$25.4 million,[29],5
-Anita,"September 2, 1977",175 mph (280 km/h),926 hPa (27.34 inHg),Mexico,11,Extensive,[30],5
+Edith,9-Sep-71,160 mph (260 km/h),943 hPa (27.85 inHg),"The Caribbean, Central America, Mexico, United States Gulf Coast",37,$25.4 million,[29],5
+Anita,2-Sep-77,175 mph (280 km/h),926 hPa (27.34 inHg),Mexico,11,Extensive,[30],5
 David,"August 30-31, 1979",175 mph (280 km/h),924 hPa (27.29 inHg),"The Caribbean, United States East coast",2068,$1.54 billion,[31][32],5
 Allen,"August 5-9, 1980  ",190 mph (305 km/h),899 hPa (26.55 inHg),"The Caribbean, Yucatin Peninsula, Mexico, South Texas",269,$1.24 billion,[31][33][34],5
 Gilbert,"September 13-14, 1988",185 mph (295 km/h),888 hPa (26.22 inHg),"Jamaica, Venezuela, Central America, Hispaniola, Mexico",318,$7.1 billion,[35][36],5
-Hugo,"September 15, 1989",160 mph (260 km/h),918 hPa (27.11 inHg),"The Caribbean, United States East Coast",107,$10 billion,[28][37][38],5
+Hugo,15-Sep-89,160 mph (260 km/h),918 hPa (27.11 inHg),"The Caribbean, United States East Coast",107,$10 billion,[28][37][38],5
 Andrew,"August 23-24, 1992  ",175 mph (280 km/h),922 hPa (27.23 inHg),"The Bahamas, Florida, United States Gulf Coast",65,$26.5 billion,[28][39],5
 Mitch,"October 26-28, 1998",180 mph (285 km/h),905 hPa (26.72 inHg),"Central America, Yucatin Peninsula, South Florida",19325,$6.2 billion,[40][41][42][43],5
 Isabel,"September 11-14, 2003  ",165 mph (270 km/h),915 hPa (27.02 inHg),"Greater Antilles, Bahamas, Eastern United States, Ontario",51,$5.37 billion,[28][44],5
 Ivan,"September 9-14, 2004  ",165 mph (270 km/h),910 hPa (26.87 inHg),"The Caribbean, Venezuela, United States Gulf Coast",124,$23.3 billion,[28][45],5
-Emily,"July 16, 2005",160 mph (260 km/h),929 hPa (27.43 inHg),"Windward Islands, Jamaica, Mexico, Texas",17,$1.01 billion,[46],5
+Emily,16-Jul-05,160 mph (260 km/h),929 hPa (27.43 inHg),"Windward Islands, Jamaica, Mexico, Texas",17,$1.01 billion,[46],5
 Katrina,"August 28-29, 2005",175 mph (280 km/h),902 hPa (26.64 inHg),"Bahamas, United States Gulf Coast",1836,$125 billion,[47],5
 Rita,"September 21-22, 2005",180 mph (285 km/h),895 hPa (26.43 inHg),"Cuba, United States Gulf Coast",125,$12 billion,[48],5
-Wilma,"October 19, 2005",185 mph (295 km/h),882 hPa (26.05 inHg),"Greater Antilles, Central America, Florida",87,$29.4 billion,[49][50][51][52],5
+Wilma,19-Oct-05,185 mph (295 km/h),882 hPa (26.05 inHg),"Greater Antilles, Central America, Florida",87,$29.4 billion,[49][50][51][52],5
 Dean,"August 18-21, 2007  ",175 mph (280 km/h),905 hPa (26.72 inHg),"The Caribbean, Central America",45,$1.76 billion,[31][53][54],5
 Felix,"September 3-4, 2007  ",175 mph (280 km/h),929 hPa (27.43 inHg),"Nicaragua, Honduras",133,$720 million,[55][56][57][58],5
-Matthew,"October 1, 2016",165 mph (270 km/h),934 hPa (27.58 inHg),"Antilles, Venezuela, Colombia, United States East Coast, Atlantic Canada",603,$15.1 billion,[59],5
+Matthew,1-Oct-16,165 mph (270 km/h),934 hPa (27.58 inHg),"Antilles, Venezuela, Colombia, United States East Coast, Atlantic Canada",603,$15.1 billion,[59],5
 Irma,"September 5-9, 2017  ",180 mph (285 km/h),914 hPa (26.99 inHg),"Cape Verde, The Caribbean, Virgin Islands, Cuba, Florida",138,$64.8 billion,[60],5
 Maria,"September 18-20, 2017  ",175 mph (280 km/h),908 hPa (26.81 inHg),"Lesser Antilles, Virgin Islands, Puerto Rico, Dominican Republic, Turks and Caicos Islands",3057,$91.6 billion,[61],5
-Michael,"October 10, 2018",160 mph (260 km/h),919 hPa (27.14 inHg),"Central America, United States Gulf Coast",74,$25.1 billion,[62],5
+Michael,10-Oct-18,160 mph (260 km/h),919 hPa (27.14 inHg),"Central America, United States Gulf Coast",74,$25.1 billion,[62],5
 Dorian,"September 1-2, 2019",185 mph (295 km/h),910 hPa (26.87 inHg),"The Caribbean, The Bahamas, United States East Coast, Atlantic Canada, Greenland",84,$5 billion,[63],5
-Lorenzo,"September 29, 2019",160 mph (260 km/h),925 hPa (27.32 inHg),"Cabo Verde, Azores, Western Europe",19,$362 million,[64],5
+Lorenzo,29-Sep-19,160 mph (260 km/h),925 hPa (27.32 inHg),"Cabo Verde, Azores, Western Europe",19,$362 million,[64],5
 San Pedro,"September 9-15, 1921",125 mph (205 km/h),961 hPa (28.38 inHg),"Windward Islands, Greater Antilles",80,,[12],3
 Unnamed,"September 16-22, 1922  ",120 mph (195 km/h),960 hPa (28.35 inHg),"Leeward Islands, Bermuda",,,,3
 Unnamed,"September 29-30, 1923",120 mph (195 km/h),960 hPa (28.35 inHg),"Bahamas, Newfoundland",,,,3
 Unnamed,"August 22-24, 1924",120 mph (195 km/h),960 hPa (28.35 inHg),"Puerto Rico, East Coast of the United States",2,,[70],3
 Unnamed,"August 2-6, 1926",120 mph (195 km/h),968 hPa (28.59 inHg),"Bermuda, Atlantic Canada",55,,[71][72],3
-Unnamed,"August 25, 1926",115 mph (185 km/h),955 hPa (28.20 inHg),Louisiana,25,,[73][74],3
+Unnamed,25-Aug-26,115 mph (185 km/h),955 hPa (28.20 inHg),Louisiana,25,,[73][74],3
 Unnamed,"August 21-24, 1927",125 mph (205 km/h),950 hPa (28.05 inHg),"East Coast of the United States, Atlantic Canada",175,,[75],3
 Unnamed,"August 25-27, 1930",125 mph (205 km/h),960 hPa (28.35 inHg),Bermuda,,,[76],3
 Unnamed,"October 5-6, 1933",125 mph (205 km/h),958 hPa (28.29 inHg),"Jamaica, Cuba, Florida, Bahamas, Atlantic Canada",10,,[77][78],3
@@ -49,92 +49,92 @@ Unnamed,"November 23-24, 1934",115 mph (185 km/h),955 hPa (28.20 inHg),Bermuda,,
 Unnamed,"September 15-17, 1936",120 mph (195 km/h),962 hPa (28.41 inHg),East Coast of the United States,2,,[80],3
 Unnamed,"August 15-17, 1937",125 mph (205 km/h),951 hPa (28.08 inHg),No land areas,,,,3
 Unnamed,"August 25-26, 1938",120 mph (195 km/h),964 hPa (28.47 inHg),Mexico,,,[81],3
-Unnamed,"September 23, 1941",125 mph (205 km/h),942 hPa (27.82 inHg),"Central United States, Canada",7,,[82][83],3
-Unnamed,"October 5, 1941",120 mph (195 km/h),962 hPa (28.41 inHg),"Bahamas, Southeastern United States",10,,[82][84],3
+Unnamed,23-Sep-41,125 mph (205 km/h),942 hPa (27.82 inHg),"Central United States, Canada",7,,[82][83],3
+Unnamed,5-Oct-41,120 mph (195 km/h),962 hPa (28.41 inHg),"Bahamas, Southeastern United States",10,,[82][84],3
 Unnamed,"August 29-30, 1942",115 mph (185 km/h),950 hPa (28.05 inHg),"Mexico, Texas",8,,[85],3
 Unnamed,"September 3-5, 1943",120 mph (195 km/h),,"Bermuda, Atlantic Canada",,,[86],3
 Unnamed,"August 19-20, 1944",120 mph (195 km/h),963 hPa (28.44 inHg),"Windward Islands, Jamaica, Mexico",216,,[87],3
 Unnamed,"August 26-27, 1945",115 mph (185 km/h),963 hPa (28.44 inHg),Texas,3,,[88],3
 Love,"October 19-20, 1947",120 mph (195 km/h),961 hPa (28.38 inHg),Bermuda,,,[89],3
 Able,"August 28-29, 1948",120 mph (195 km/h),983 hPa (29.03 inHg),"East Coast of the United States, Atlantic Canada",,,[90][91],3
-Fox,"October 5, 1948",125 mph (205 km/h),971 hPa (28.67 inHg),"Cuba, Florida, Bahamas, Bermuda",11,,[90][92],3
+Fox,5-Oct-48,125 mph (205 km/h),971 hPa (28.67 inHg),"Cuba, Florida, Bahamas, Bermuda",11,,[90][92],3
 Unnamed,"September 6-10, 1949",125 mph (205 km/h),974 hPa (28.76 inHg),"Bermuda, Newfoundland",,,[93],3
 Able,"August 17-20, 1950",115 mph (185 km/h),978 hPa (28.88 inHg),"East Coast of the United States, Atlantic Canada",11,,[94][95],3
-Easy,"September 5, 1950",120 mph (195 km/h),958 hPa (28.29 inHg),"Cuba, Florida",2,,[96],3
-Jig,"October 15, 1950",115 mph (185 km/h),987 hPa (29.15 inHg),No land areas,,,,3
+Easy,5-Sep-50,120 mph (195 km/h),958 hPa (28.29 inHg),"Cuba, Florida",2,,[96],3
+Jig,15-Oct-50,115 mph (185 km/h),987 hPa (29.15 inHg),No land areas,,,,3
 Fox,"September 7-8, 1951",115 mph (185 km/h),978 hPa (28.88 inHg),No land areas,,,,3
 Charlie,"September 26-27, 1952",120 mph (195 km/h),980 hPa (28.94 inHg),"Puerto Rico, Bermuda",4,,[97],3
 Edna,"September 17-18, 1953",115 mph (185 km/h),962 hPa (28.41 inHg),Bermuda,,,[98],3
-Florence,"September 25, 1953",115 mph (185 km/h),968 hPa (28.59 inHg),Gulf Coast of the United States,,,[99],3
-Carol,"August 31, 1954",115 mph (185 km/h),955 hPa (28.20 inHg),"East Coast of the United States, Atlantic Canada",,[11][100][101][102],,3
+Florence,25-Sep-53,115 mph (185 km/h),968 hPa (28.59 inHg),Gulf Coast of the United States,,,[99],3
+Carol,31-Aug-54,115 mph (185 km/h),955 hPa (28.20 inHg),"East Coast of the United States, Atlantic Canada",,[11][100][101][102],,3
 Edna,"September 9-11, 1954",125 mph (205 km/h),943 hPa (27.85 inHg),"New England, Atlantic Canada",27,,[103][104][105][106],3
 Hilda,"September 15-19, 1955  ",120 mph (195 km/h),952 hPa (28.11 inHg),"Cuba, Mexico",304,,[107],3
 Betsy,"August 13-17, 1956  ",120 mph (195 km/h),959 hPa (28.32 inHg),"Leeward Islands, Puerto Rico, Bahamas",,[108][109],,3
-Audrey,"June 27, 1957",125 mph (205 km/h),946 hPa (27.94 inHg),"Gulf Coast of the United States, Canada",431,,[11][110][111],3
+Audrey,27-Jun-57,125 mph (205 km/h),946 hPa (27.94 inHg),"Gulf Coast of the United States, Canada",431,,[11][110][111],3
 Hannah,"September 30-October 2, 1959",120 mph (195 km/h),959 hPa (28.32 inHg),Azores,,,[112],3
 Ethel,"September 14-15, 1960",115 mph (185 km/h),974 hPa (28.76 inHg),Gulf Coast of the United States,1,,[113][114],3
 Arlene,"August 9-10, 1963",115 mph (185 km/h),969 hPa (28.61 inHg),"Leeward Islands, Bermuda",,,,3
-Beulah,"August 24, 1963",120 mph (195 km/h),958 hPa (28.29 inHg),No land areas,,,,3
+Beulah,24-Aug-63,120 mph (195 km/h),958 hPa (28.29 inHg),No land areas,,,,3
 Isbell,"October 14-15, 1964",115 mph (185 km/h),964 hPa (28.47 inHg),"Cuba, East Coast of the United States",7,,[115][116][117],3
 Alma,"June 8-9, 1966",125 mph (205 km/h),970 hPa (28.64 inHg),"Central America, Cuba, East Coast of the United States",93,,[118][119][120],3
 Faith,"August 28-29, 1966",120 mph (195 km/h),950 hPa (28.05 inHg),"Atlantic Canada, Northern Europe",5,,[121][122],3
 Debbie,"August 18-23, 1969  ",120 mph (195 km/h),951 hPa (28.08 inHg),Atlantic Canada,,,[123],3
-Francelia,"September 2, 1969",115 mph (185 km/h),973 hPa (28.73 inHg),Central America,271,,[124],3
-Gerda,"September 9, 1969",125 mph (205 km/h),979 hPa (28.91 inHg),"East Coast of the United States, Atlantic Canada",,,[125],3
-Inga,"October 5, 1969",115 mph (185 km/h),964 hPa (28.47 inHg),Bermuda,,,[126],3
-Ella,"September 12, 1970",125 mph (205 km/h),967 hPa (28.56 inHg),"Cuba, Florida, Texas",1,,[127][128],3
-Ellen,"September 22, 1973",115 mph (185 km/h),962 hPa (28.41 inHg),No land areas,,,,3
+Francelia,2-Sep-69,115 mph (185 km/h),973 hPa (28.73 inHg),Central America,271,,[124],3
+Gerda,9-Sep-69,125 mph (205 km/h),979 hPa (28.91 inHg),"East Coast of the United States, Atlantic Canada",,,[125],3
+Inga,5-Oct-69,115 mph (185 km/h),964 hPa (28.47 inHg),Bermuda,,,[126],3
+Ella,12-Sep-70,125 mph (205 km/h),967 hPa (28.56 inHg),"Cuba, Florida, Texas",1,,[127][128],3
+Ellen,22-Sep-73,115 mph (185 km/h),962 hPa (28.41 inHg),No land areas,,,,3
 Becky,"August 30-31, 1974",115 mph (185 km/h),977 hPa (28.85 inHg),No land areas,,,,3
-Caroline,"August 31, 1975",115 mph (185 km/h),963 hPa (28.44 inHg),"Turks and Caicos, Cuba, Mexico",2,,[129],3
-Eloise,"September 23, 1975",125 mph (205 km/h),955 hPa (28.20 inHg),"Lesser Antilles, Greater Antilles, Yucatin peninsula, Gulf Coast of the United States, eastern United States",80,,[12][130],3
+Caroline,31-Aug-75,115 mph (185 km/h),963 hPa (28.44 inHg),"Turks and Caicos, Cuba, Mexico",2,,[129],3
+Eloise,23-Sep-75,125 mph (205 km/h),955 hPa (28.20 inHg),"Lesser Antilles, Greater Antilles, Yucatin peninsula, Gulf Coast of the United States, eastern United States",80,,[12][130],3
 Belle,"August 8-9, 1976",120 mph (195 km/h),957 hPa (28.26 inHg),East Coast of the United States,,[131][132][133],,3
-Frances,"September 1, 1976",115 mph (185 km/h),963 hPa (28.44 inHg),No land areas,,,,3
-Frances,"September 9, 1980",115 mph (185 km/h),958 hPa (28.29 inHg),Cape Verde,,,[134],3
-Floyd,"September 7, 1981",115 mph (185 km/h),975 hPa (28.79 inHg),"Lesser Antilles, Bermuda",,,,3
+Frances,1-Sep-76,115 mph (185 km/h),963 hPa (28.44 inHg),No land areas,,,,3
+Frances,9-Sep-80,115 mph (185 km/h),958 hPa (28.29 inHg),Cape Verde,,,[134],3
+Floyd,7-Sep-81,115 mph (185 km/h),975 hPa (28.79 inHg),"Lesser Antilles, Bermuda",,,,3
 Irene,"September 28-29, 1981",120 mph (195 km/h),959 hPa (28.32 inHg),No land areas,,,,3
-Alicia,"August 18, 1983",115 mph (185 km/h),962 hPa (28.41 inHg),Texas,21,,[135][136],3
+Alicia,18-Aug-83,115 mph (185 km/h),962 hPa (28.41 inHg),Texas,21,,[135][136],3
 Elena,"September 1-2, 1985",125 mph (205 km/h),953 hPa (28.14 inHg),"Cuba, Mississippi",9,$1.3 billion,,3
 Kate,"November 20-21, 1985",120 mph (195 km/h),954 hPa (28.17 inHg),"Cuba, Florida",15,,[137],3
 Emily,"September 22-23, 1987",125 mph (205 km/h),958 hPa (28.29 inHg),"Lesser Antilles, Greater Antilles, Bermuda, Bahamas",3,,[138],3
-Gustav,"August 31, 1990",120 mph (195 km/h),956 hPa (28.23 inHg),No Land Areas,0,Minimal,[139],3
-Bob,"August 19, 1991",115 mph (185 km/h),950 hPa (28.05 inHg),"East Coast of the United States, Nova Scotia",17,,[140],3
+Gustav,31-Aug-90,120 mph (195 km/h),956 hPa (28.23 inHg),No Land Areas,0,Minimal,[139],3
+Bob,19-Aug-91,115 mph (185 km/h),950 hPa (28.05 inHg),"East Coast of the United States, Nova Scotia",17,,[140],3
 Emily,"August 31-September 1, 1993",115 mph (185 km/h),960 hPa (28.35 inHg),North Carolina,3,,[141],3
 Marilyn,"September 16-17, 1995",115 mph (185 km/h),949 hPa (28.02 inHg),"United States Virgin Islands, Puerto Rico, Dominica, Martinique, Guadeloupe",,[142],,3
 Roxanne,"October 10-11, 1995",115 mph (185 km/h),956 hPa (28.23 inHg),"Yucatin Peninsula, Veracruz, Tabasco",29,,[143],3
-Bertha,"July 9, 1996",115 mph (185 km/h),960 hPa (28.35 inHg),"Northeastern Caribbean, Florida, North Carolina",,[144],,3
+Bertha,9-Jul-96,115 mph (185 km/h),960 hPa (28.35 inHg),"Northeastern Caribbean, Florida, North Carolina",,[144],,3
 Fran,"September 4-6, 1996",120 mph (195 km/h),946 hPa (27.94 inHg),"North Carolina, South Carolina, Virginia, West Virginia, Pennsylvania",27,,[145],3
-Isidore,"September 28, 1996",115 mph (185 km/h),960 hPa (28.35 inHg),No land areas,0,None,[146],3
-Lili,"October 19, 1996",115 mph (185 km/h),960 hPa (28.35 inHg),"Central America, Cuba, Florida, Bahamas, Bermuda, Ireland, Great Britain",22,,[147],3
+Isidore,28-Sep-96,115 mph (185 km/h),960 hPa (28.35 inHg),No land areas,0,None,[146],3
+Lili,19-Oct-96,115 mph (185 km/h),960 hPa (28.35 inHg),"Central America, Cuba, Florida, Bahamas, Bermuda, Ireland, Great Britain",22,,[147],3
 Erika,"September 8-10, 1997",125 mph (205 km/h),946 hPa (27.94 inHg),"Leeward Islands, Puerto Rico, Azores",2,,[148],3
 Bonnie,"August 23-26, 1998",115 mph (185 km/h),955 hPa (28.20 inHg),"Leeward Islands, North Carolina, Mid-Atlantic States",5,,[149],3
 Alberto,"August 12-13, 2000",125 mph (205 km/h),950 hPa (28.05 inHg),No land areas,0,None,[150],3
 Erin,"September 9-10, 2001",120 mph (195 km/h),968 hPa (28.59 inHg),"Bermuda, Newfoundland, East Coast of the United States",None,Minimal,[151],3
-Felix,"September 14, 2001",115 mph (185 km/h),962 hPa (28.41 inHg),Azores,None,None,[152],3
+Felix,14-Sep-01,115 mph (185 km/h),962 hPa (28.41 inHg),Azores,None,None,[152],3
 Isidore,"September 21-23, 2002",125 mph (205 km/h),934 hPa (27.58 inHg),"Windward Islands, Southeast Mexico, Louisiana",22,,[153],3
 Kate,"October 3-5, 2003",125 mph (205 km/h),952 hPa (28.11 inHg),Newfoundland,None,None,[154],3
-Alex,"August 5, 2004",120 mph (195 km/h),957 hPa (28.26 inHg),North Carolina,1,,[155],3
+Alex,5-Aug-04,120 mph (195 km/h),957 hPa (28.26 inHg),North Carolina,1,,[155],3
 Jeanne,"September 25-26, 2004",120 mph (195 km/h),950 hPa (28.05 inHg),"Guadeloupe, Hispaniola, Bahamas, Florida",3037,,[156],3
-Maria,"September 6, 2005",115 mph (185 km/h),962 hPa (28.41 inHg),"East Coast of the United States, Norway",3,Minimal,[157][158],3
-Beta,"October 30, 2005",115 mph (185 km/h),962 hPa (28.41 inHg),Central America,,[159][160][161][162][163][164][165][166][167],,3
+Maria,6-Sep-05,115 mph (185 km/h),962 hPa (28.41 inHg),"East Coast of the United States, Norway",3,Minimal,[157][158],3
+Beta,30-Oct-05,115 mph (185 km/h),962 hPa (28.41 inHg),Central America,,[159][160][161][162][163][164][165][166][167],,3
 Gordon,"September 14-15, 2006",120 mph (195 km/h),955 hPa (28.20 inHg),"Azores, Iberian Peninsula, British Isles",None,,[168][169],3
-Helene,"September 8, 2006",120 mph (195 km/h),955 hPa (28.20 inHg),British Isles,None,None,[170],3
+Helene,8-Sep-06,120 mph (195 km/h),955 hPa (28.20 inHg),British Isles,None,None,[170],3
 Bertha,"July 7-8, 2008",125 mph (205 km/h),952 hPa (28.11 inHg),"Bermuda, East Coast of the United States",3,Minimal,[171],3
 Fred,"September 9-10, 2009",120 mph (195 km/h),958 hPa (28.29 inHg),Cape Verde Islands,None,None,[172],3
-Karl,"September 17, 2010",125 mph (205 km/h),956 hPa (28.23 inHg),"Belize, Yucatin Peninsula, Veracruz",22,,[173],3
-Irene,"August 24, 2011",120 mph (195 km/h),942 hPa (27.82 inHg),"Antilles, Bahamas, North Carolina, New Jersey, New York, Eastern Canada",,[174],,3
+Karl,17-Sep-10,125 mph (205 km/h),956 hPa (28.23 inHg),"Belize, Yucatin Peninsula, Veracruz",22,,[173],3
+Irene,24-Aug-11,120 mph (195 km/h),942 hPa (27.82 inHg),"Antilles, Bahamas, North Carolina, New Jersey, New York, Eastern Canada",,[174],,3
 Rina,"October 25-26, 2011",115 mph (185 km/h),966 hPa (28.53 inHg),"Central America, Florida",None,,[175][176],3
-Michael,"September 6, 2012",115 mph (185 km/h),964 hPa (28.47 inHg),No land areas,None,None,[177],3
-Sandy,"October 24, 2012",115 mph (185 km/h),940 hPa (27.76 inHg),"Greater Antilles, Bahamas, United States East Coast",233,,[178][179][180],3
-Edouard,"September 16, 2014",120 mph (195 km/h),960 hPa (28.35 inHg),East Coast of the United States,2,Minimal,[181][182],3
-Danny,"August 21, 2015",125 mph (205 km/h),960 hPa (28.35 inHg),Lesser Antilles,None,None,[183],3
+Michael,6-Sep-12,115 mph (185 km/h),964 hPa (28.47 inHg),No land areas,None,None,[177],3
+Sandy,24-Oct-12,115 mph (185 km/h),940 hPa (27.76 inHg),"Greater Antilles, Bahamas, United States East Coast",233,,[178][179][180],3
+Edouard,16-Sep-14,120 mph (195 km/h),960 hPa (28.35 inHg),East Coast of the United States,2,Minimal,[181][182],3
+Danny,21-Aug-15,125 mph (205 km/h),960 hPa (28.35 inHg),Lesser Antilles,None,None,[183],3
 Gaston,"August 28-31, 2016  ",115 mph (185 km/h),962 hPa (28.41 inHg),Azores,None,None,[184],3
-Otto,"November 24, 2016",115 mph (185 km/h),975 hPa (28.79 inHg),"Nicaragua, Costa Rica, Panama",23,,[185][186][187][188],3
-Lee,"September 27, 2017",115 mph (185 km/h),962 hPa (28.41 inHg),No land areas,None,None,[189],3
-Ophelia,"October 14, 2017",115 mph (185 km/h),959 hPa (28.32 inHg),"Azores, Portugal, Spain, Ireland, United Kingdom",3,,[190][191][192][193][194],3
+Otto,24-Nov-16,115 mph (185 km/h),975 hPa (28.79 inHg),"Nicaragua, Costa Rica, Panama",23,,[185][186][187][188],3
+Lee,27-Sep-17,115 mph (185 km/h),962 hPa (28.41 inHg),No land areas,None,None,[189],3
+Ophelia,14-Oct-17,115 mph (185 km/h),959 hPa (28.32 inHg),"Azores, Portugal, Spain, Ireland, United Kingdom",3,,[190][191][192][193][194],3
 Humberto,"September 17-19, 2019",125 mph (205 km/h),950 hPa (28.05 inHg),"Dominican Republic, Haiti, Cuba, The Bahamas, Florida, Bermuda",2,$25 million,,3
 Epsilon,"October 21-October 22, 2020",115 mph (185 km/h),952 hPa (28.11 inHg),Bermuda,1,Minimal,[195],3
-Zeta,"October 28, 2020",115 mph (185 km/h),970 hPa (28.64 inHg),"Cayman Islands, Jamaica, Central America, Yucatin Peninsula, Gulf Coast of the United States, Southeastern United States, Mid-Atlantic, New England",9,$4.4 billion,,3
-Grace,"August 20, 2021",120 mph (195 km/h),967 hPa (28.56 inHg),"Lesser Antilles, Greater Antilles, Yucatin Peninsula, Central Mexico",15,$513 million,,3
+Zeta,28-Oct-20,115 mph (185 km/h),970 hPa (28.64 inHg),"Cayman Islands, Jamaica, Central America, Yucatin Peninsula, Gulf Coast of the United States, Southeastern United States, Mid-Atlantic, New England",9,$4.4 billion,,3
+Grace,20-Aug-21,120 mph (195 km/h),967 hPa (28.56 inHg),"Lesser Antilles, Greater Antilles, Yucatin Peninsula, Central Mexico",15,$513 million,,3
 Larry,"September 4-8, 2021",125 mph (205 km/h),955 hPa (28.20 inHg),"Bermuda, Newfoundland",7,$80 million,,3
 Four,"October 11 - 22, 1922",110 mph (175 km/h),984 hPa (29.06 inHg),"Colombia, Yucatin Peninsula, Tabasco",0,Unknown,[2][150][151],2
 Two,"September 1 - 9, 1923",105 mph (165 km/h),989 hPa (29.21 inHg),,0,None,[2][77],2
@@ -431,7 +431,6 @@ Debby,"August 19 - 24, 2000",85 mph (140 km/h),991 hPa (29.26 inHg),"Lesser Anti
 Florence,"September 10 - 19, 2000",80 mph (130 km/h),985 hPa (29.09 inHg),"United States East Coast, Bermuda, Atlantic Canada",3,,[2],1
 Gordon,"September 14 - 21, 2000",80 mph (130 km/h),981 hPa (28.97 inHg),"Belize, Yucatin Peninsula, Cuba, United States East Coast, Atlantic Canada",26,$10.8 million,[2],1
 Joyce,"September 29 - October 2, 2000",90 mph (150 km/h),975 hPa (28.79 inHg),"Trinidad and Tobago, Windward Islands, Leeward Islands",0,,[2],1
-Gabrielle,"September 11 - 19, 2001",80 mph (130 km/h),975 hPa (28.79 inHg),"Florida, Newfoundland",3,> 230 million,[2],1
 Karen,"October 12 - 15, 2001",80 mph (130 km/h),982 hPa (29.00 inHg),"Bermuda, Atlantic Canada",0,$1.4 million,[2],1
 Noel,"November 4 - 6, 2001",75 mph (120 km/h),986 hPa (29.12 inHg),Atlantic Canada,0,,[2],1
 Olga,"November 24 - December 7, 2001",90 mph (150 km/h),973 hPa (28.73 inHg),"Bermuda, The Bahamas, Cuba, Florida",0,,[2],1
