@@ -1,0 +1,47 @@
+#Import dependencies
+
+from flask import Flask, jsonify
+import numpy as np
+import sqlalchemy
+from sqlalchemy.ext.automap import automap_base
+from sqlalchemy.orm import Session
+from sqlalchemy import create_engine, func, and_
+from datetime import datetime as dt
+
+#Engine/ Create App
+#connection_string = "postgres:Villanova12!@hurricaneinfo.cswz4lmvyjbn.us-east-1.rds.amazonaws.com:5432/hurricane_info"
+engine = create_engine(f'postgresql://postgres:Villanova12!@hurricaneinfo.cswz4lmvyjbn.us-east-1.rds.amazonaws.com:5432/hurricane_info')
+
+#engine = create_engine('sqlite:///Resources/hawaii.sqlite')
+#Base = automap_base()
+#Base.prepare(engine, reflect=True)
+#measurement = Base.classes.measurement
+#station = Base.classes.station
+
+app = Flask(__name__)
+
+#Routes
+@app.route("/")
+def home_page():
+    return (<br> f'List of temperatures in the most active station in Hawaii:  /api/v1.0/tobs<br/>')
+
+
+
+@app.route('/api/v1.0/tobs')
+def tobs():
+    # find most active station
+    session = Session(engine)
+    activity = session.query(measurement.station, func.count(measurement.station)).group_by(
+        measurement.station).order_by(func.count(measurement.station).desc()).all()
+    most_active = activity[0][0]
+    temps = session.query(measurement.date, measurement.tobs).filter(measurement.station == most_active).group_by(
+        measurement.date).all()
+    temp_data = {}
+    for value in temps:
+        temp_data[value.date] = value.tobs
+    session.close()
+    return (jsonify(temp_data))
+
+#End
+if __name__ == "__main__":
+    app.run(debug=True)
