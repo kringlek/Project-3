@@ -102,4 +102,13 @@ function plotter(data) {
     }
     let traceData5 = [trace5];
     Plotly.newPlot('scatter5', traceData5, layout5);
+};
+
+function categories(categorydata) {
+    var category = Object.values(categorydata.Category);
+    var year = Object.values(categorydata.Year);
+    
+    let trace6 = {
+        
+    }
 }
