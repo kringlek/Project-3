@@ -1,5 +1,5 @@
-const url = 'test.json'
-const caturl = 'category.json'
+const url = '../../Data/test.json'
+const caturl = '../../Data/category.json'
 
 var catdata
 var information
