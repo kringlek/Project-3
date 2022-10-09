@@ -1,6 +1,7 @@
 #Import dependencies
 from flask import Flask, jsonify
 import numpy as np
+from Resources import connection
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
@@ -9,13 +10,7 @@ from datetime import datetime as dt
 from sqlalchemy.sql import text
 
 #Engine/ Create App
-#connection_string = "postgres:Villanova12!@hurricaneinfo.cswz4lmvyjbn.us-east-1.rds.amazonaws.com:5432/hurricane_info"
-engine = create_engine(f'postgresql://postgres:Villanova12!@hurricaneinfo.cswz4lmvyjbn.us-east-1.rds.amazonaws.com:5432/hurricane_info')
-#engine = create_engine('sqlite:///Resources/hawaii.sqlite')
-#Base = automap_base()
-#Base.prepare(engine, reflect=True)
-#measurement = Base.classes.measurement
-#station = Base.classes.station
+engine = create_engine(connection)
 
 app = Flask(__name__)
 
