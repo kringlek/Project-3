@@ -1,5 +1,5 @@
 #Import dependencies
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 import numpy as np
 from Resources import connection
 import sqlalchemy
@@ -10,20 +10,22 @@ from datetime import datetime as dt
 from sqlalchemy.sql import text
 
 #Engine/ Create App
-engine = create_engine(connection)
+# engine = create_engine(connection)
 
 app = Flask(__name__)
 
 @app.route('/')
-def tobs():
+def home():
     # find most active station
-    session = Session(engine)
-    temps = session.query(text('hurricane_info."Name", hurricane_info."Deaths", hurricane_info."Damages ($)" from public.hurricane_info'))
-    temp_data = {}
-    for value in temps:
-        temp_data[value.date] = value.tobs
-    session.close()
-    return (jsonify(temp_data))
+    # session = Session(engine)
+    # temps = session.query(text('hurricane_info."Name", hurricane_info."Deaths", hurricane_info."Damages ($)" from public.hurricane_info'))
+    # temp_data = {}
+    # for value in temps:
+    #     temp_data[value.date] = value.tobs
+    # session.close()
+    # return (jsonify(temp_data))
+    return render_template("test.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
