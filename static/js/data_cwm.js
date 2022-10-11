@@ -3,7 +3,7 @@
 // FROM RYAN TUTORING: VARIABLE IS DECLARED OUTSIDE OF THE FUNCTION SO THAT THE VALUES FROM THE VARIBLE CAN BE USED IN THE BROWSER CONSOLE
 // FOR CONTINUED DEVELOPMENT.
 //const url= "distinctstormsjson.json";
-const chuck_url= "/Data/storms.json";
+const chuck_url= "/static/js/storms.json";
 
 var information
 
