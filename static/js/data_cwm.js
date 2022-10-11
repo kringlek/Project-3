@@ -3,13 +3,13 @@
 // FROM RYAN TUTORING: VARIABLE IS DECLARED OUTSIDE OF THE FUNCTION SO THAT THE VALUES FROM THE VARIBLE CAN BE USED IN THE BROWSER CONSOLE
 // FOR CONTINUED DEVELOPMENT.
 //const url= "distinctstormsjson.json";
-const url= "storms.json";
+const chuck_url= "/static/js/storms.json";
 
 var information
 
 // THE FUNCTION BRINGS THE INFORMATION json INTO THE BROWSER FOR ONGOING USE 
 
-d3.json(url).then(function(data) {
+d3.json(chuck_url).then(function(data) {
 
 // sort the storm dataset in descending order
 let sorteddamages = data.sort(function(a, b) {
@@ -36,7 +36,7 @@ let slicedData = sorteddamages.slice(0, 10).reverse();
     console.log(x2result)
 
     // Trace1 for Damages ** NOTE THE REVERSAL OF X AND Y RESULTS for  Orientation: "h"
-        let trace1 = {
+        let trace6 = {
         y: xresult,
         x: yresult,
         text: barText,
@@ -57,7 +57,7 @@ let slicedData = sorteddamages.slice(0, 10).reverse();
 
         // Data array
         // `data` has already been defined, so we must choose a new name here:
-        let traceData = [trace1];
+        let traceData6 = [trace6];
 
         // Apply a title to the layout
         let layout = {
@@ -86,7 +86,7 @@ let slicedData = sorteddamages.slice(0, 10).reverse();
 
         // Render the plot to the div tag with id "plot"
         // Note that we use `traceData` here, not `data`
-        Plotly.newPlot("plot", traceData, layout);
+        Plotly.newPlot("catdata", traceData6, layout);
 
     
 
