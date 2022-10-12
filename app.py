@@ -1,7 +1,6 @@
 #Import dependencies
 from flask import Flask, jsonify, render_template
 import numpy as np
-from Resources import connection
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
