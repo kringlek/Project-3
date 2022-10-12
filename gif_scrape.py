@@ -5,7 +5,7 @@ import time
 from webdriver_manager.chrome import ChromeDriverManager
 import re
 import pandas as pd
-# import numpy as np
+import numpy as np
 
 def scrape_gifs():      
         # Set up Splinter
@@ -61,6 +61,10 @@ def scrape_gifs():
 
         print(cleaned_names)
 
+        final_series=pd.Series(cleaned_names)
+        myFinalList = pd.unique(final_series).tolist()
+        print(myFinalList)
+    
         # clean_gif_name = gif_name[1]
         # print(clean_gif_name)
 
