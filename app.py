@@ -26,6 +26,10 @@ def home():
     # return (jsonify(temp_data))
     return render_template("test.html")
 
+@app.route('/hurricane-selector')
+def hurricane():
+    return render_template("hurricane.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
