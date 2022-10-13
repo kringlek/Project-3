@@ -1,4 +1,3 @@
-
 var path
 var hurr_paths = []
 var myMap
@@ -119,4 +118,3 @@ function createInitMap() {
         collapsed: false
     }).addTo(myMap);
 }
-
