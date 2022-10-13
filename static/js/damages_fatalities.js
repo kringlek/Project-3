@@ -57,9 +57,26 @@ d3.json(most_damaged_url).then(function (data) {
         yaxis: 'y2'
     };
 
+    let trace63 = {
+        x: xresult,
+        y: [0],
+        type: 'bar',
+        hoverinfo: 'none',
+        showlegend: false
+    };
+    
+    let trace64 = {
+        x: xresult,
+        y: [0],
+        type: 'bar',
+        hoverinfo: 'none',
+        showlegend: false,
+        yaxis: 'y2'
+    };
+
     // Data array
     // `data` has already been defined, so we must choose a new name here:
-    let traceData63 = [trace61, trace62];
+    let traceData63 = [trace61, trace63, trace64, trace62];
 
     // Apply a title to the layout
     let layout = {
