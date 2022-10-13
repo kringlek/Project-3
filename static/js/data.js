@@ -28,10 +28,11 @@ d3.json(url).then(function(data){
     //     console.log(test[i]);
     // }
     function init(){
-        let inital = information
+        let inital = information;
+        createInitMap();
         startInfo(inital);
         plotter(information);
-    }
+    };
     // demoInfo(data);
     let nameArr = Object.values(names);
     let filterednames = [...new Set(nameArr)];
@@ -48,7 +49,7 @@ d3.json(url).then(function(data){
         let dataset = dropdownMenu.property('value');
         let id = getKeyByValue(information.Name_year, dataset);
         // console.log(id);
-        console.log(information.Name_year[id]);
+        // console.log(information.Name_year[id]);
         // plotter(numerical[0]);
         demoInfo(information, id);
         createMap(information.Name_year[id]);
