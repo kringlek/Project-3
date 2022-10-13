@@ -48,7 +48,7 @@ d3.json(most_damaged_url).then(function (data) {
     // Trace2 for fatalities
     let trace62 = {
         x: xresult,
-        y2: y2result,
+        y: y2result,
         text: barText2,
         //text: reversedData.map(object => object.Name),
         name: "Fatalities by Hurricane",
@@ -84,7 +84,8 @@ d3.json(most_damaged_url).then(function (data) {
             r: 100,
             t: 100,
             b: 100
-        }
+        },
+        barmode:'group'
     };
 
     // Render the plot to the div tag 
