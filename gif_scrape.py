@@ -37,33 +37,41 @@ def scrape_gifs():
         # if WHATEVER does not end in '.gif' drop from array
         
 
-        print(href_array)
+        # print(href_array)
 
         df = pd.DataFrame(href_array, columns=['gif_url']) 
 
         gif_df = df[df['gif_url'].str.endswith('.gif')]
 
-        print(gif_df)
+    print(gif_df)
 
-    # browser.quit()
+        # gif_df.filter(items=[0, 24, 100, 107, 110, 128, 159, 191, 194, 449, 462, 465,472,
+        #     475, 482, 485, 487, 490, 492, 497, 498, 499, 503] ,axis=0)
+    
+    # print(gif_df.filter(items=[0, 24, 100, 107, 110, 128, 159, 191, 194, 449, 462, 465,
+    #         472, 475, 482, 485, 487, 490, 492, 497, 498, 499, 503],axis=0))
+    # print(gif_df.filter(items=[0, 1, 3, 4, 5, 10, 15, 20, 25, 50, 75, 465,
+    #         472, 475, 482, 485, 487, 490, 492, 497, 498, 499, 503],axis=0))
 
-    for gif in href_array:
-        gif_name = gif.split('/')
-        gif_name_list = (re.split(nums, gif_name[1]))
-        # print(gif_name_list)
+    browser.quit()
 
-        joined_names = ' '.join(gif_name_list).split()
+    # for gif in href_array:
+    #     gif_name = gif.split('/')
+    #     gif_name_list = (re.split(nums, gif_name[1]))
+    #     print(gif_name_list)
 
-        def clean_gif_names(x):
-            return list(dict.fromkeys(x))
+        # joined_names = ' '.join(gif_name_list).split()
+
+        # def clean_gif_names(x):
+        #     return list(dict.fromkeys(x))
         
-        cleaned_names = clean_gif_names(joined_names)
+        # cleaned_names = clean_gif_names(joined_names)
 
-        print(cleaned_names)
+        # print(cleaned_names)
 
-        final_series=pd.Series(cleaned_names)
-        myFinalList = pd.unique(final_series).tolist()
-        print(myFinalList)
+        # final_series=pd.Series(cleaned_names)
+        # myFinalList = pd.unique(final_series).tolist()
+        # print(myFinalList)
     
         # clean_gif_name = gif_name[1]
         # print(clean_gif_name)
