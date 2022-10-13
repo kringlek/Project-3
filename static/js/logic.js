@@ -1,7 +1,12 @@
-const hurr_url = './../static/js/hurricane_path.json'
 
 var path
 var hurr_paths = []
+
+// d3.json(hurr_url).then(function(data) {
+//     path = data;
+//     console.log(data);
+//     // createMap(data)
+// });
 
 // function createMap(hurricanes) {
 function createMap(hurricane) {
@@ -21,7 +26,7 @@ function createMap(hurricane) {
     //     hurr_paths.push(create_path(coordinates));
     // };
 
-    coordinates = hurricane.coords;
+    coordinates = path[hurricane].coords;
     hurr_paths.push(create_path(coordinates));
 
 
@@ -53,8 +58,3 @@ function createMap(hurricane) {
     }).addTo(myMap);
 }
 
-d3.json(hurr_url).then(function(data) {
-    path = data;
-    console.log(data);
-    // createMap(data)
-});

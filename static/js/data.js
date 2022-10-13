@@ -1,11 +1,17 @@
 const url = './../static/js/test.json'
 const caturl = './../static/js/category.json'
+const hurr_url = './../static/js/hurricane_path.json'
 
 var catdata
 var information
 d3.json(caturl).then(function(data){
     catdata = data;
     console.log(data)
+});
+
+d3.json(hurr_url).then(function(data) {
+    path = data;
+    console.log(data);
 });
 
 function getKeyByValue(object, value) {
@@ -41,10 +47,11 @@ d3.json(url).then(function(data){
         let dropdownMenu = d3.select('#selDataset');
         let dataset = dropdownMenu.property('value');
         let id = getKeyByValue(information.Name_year, dataset);
-        console.log(id)
         // console.log(id);
+        console.log(information.Name_year[id]);
         // plotter(numerical[0]);
         demoInfo(information, id);
+        createMap(information.Name_year[id]);
     }
     init();
 });
