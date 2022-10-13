@@ -40,7 +40,8 @@ d3.json(url).then(function(data){
     function allTogether(){
         let dropdownMenu = d3.select('#selDataset');
         let dataset = dropdownMenu.property('value');
-        let id = getKeyByValue(information.Name_year, dataset)
+        let id = getKeyByValue(information.Name_year, dataset);
+        console.log(id)
         // console.log(id);
         // plotter(numerical[0]);
         demoInfo(information, id);

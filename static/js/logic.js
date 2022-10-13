@@ -3,7 +3,8 @@ const hurr_url = './../static/js/hurricane_path.json'
 var path
 var hurr_paths = []
 
-function createMap(hurricanes) {
+// function createMap(hurricanes) {
+function createMap(hurricane) {
 
     function create_path (coords) {
         line = coords;
@@ -13,12 +14,16 @@ function createMap(hurricanes) {
         return L.polyline(line, options);
     };
 
-    hurr_names = Object.keys(hurricanes);
-    console.log("working");
-    for (var i = 0; i < hurr_names.length; i++) {
-        coordinates = hurricanes[hurr_names[i]].coords;
-        hurr_paths.push(create_path(coordinates));
-    };
+    // hurr_names = Object.keys(hurricanes);
+    // // console.log("working");
+    // for (var i = 0; i < hurr_names.length; i++) {
+    //     coordinates = hurricanes[hurr_names[i]].coords;
+    //     hurr_paths.push(create_path(coordinates));
+    // };
+
+    coordinates = hurricane.coords;
+    hurr_paths.push(create_path(coordinates));
+
 
     var street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -51,5 +56,5 @@ function createMap(hurricanes) {
 d3.json(hurr_url).then(function(data) {
     path = data;
     console.log(data);
-    createMap(data)
+    // createMap(data)
 });
