@@ -62,7 +62,7 @@ function createInitMap() {
     hurricanes = L.layerGroup(hurr_paths);
 
     overlayMaps = {
-        "Hurricane": hurricanes
+        "Janet 1955": hurricanes
     };
 
     // create map with layers "on" when first loaded
