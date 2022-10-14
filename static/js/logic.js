@@ -5,49 +5,62 @@ var hurricanes
 var overlayMaps
 var layerControl
 var baseMaps
-var leaflet_id
-var cat1 = '#fee5d9';
-var cat2 = '#fcae91';
-var cat3 = '#fb6a4a';
-var cat4 = '#de2d26';
-var cat5 = '#a50f15';
+// var cat1 = '#fee5d9';
+// var cat2 = '#fcae91';
+// var cat3 = '#fb6a4a';
+// var cat4 = '#de2d26';
+// var cat5 = '#a50f15';
+var wind_speed_knots
+var colors
 
-// d3.json(hurr_url).then(function(data) {
-//     path = data;
-//     console.log(data);
-//     // createMap(data)
-// });
 
-function create_path (coords) {
-    line = coords;
-    options = {
-        color: "black"
+// if color 0 equals color 1, then add both to list and continue
+// else add both to list and then create final path
+
+function create_path (coords, colors, hurr_paths) {
+    coordinates = [];
+    for (let i = 0; i < colors.length; i++) {
+        
+        if (colors[i] == colors[i+1]) {
+            coordinates.push(coords[i])
+        } else {
+            coordinates.push(coords[i]);
+            coordinates.push(coords[i+1]);
+
+            options = {
+                color: colors[i]
+            }
+            hurr_paths.push(L.polyline(coordinates, options));
+            coordinates = [];
+        };
     }
-    return L.polyline(line, options);
-};
 
-function color_path (coords, hexcol) {
-    line = coords;
-    options = {
-        color: hexcol
-    }
-    return L.polyline(line, options);
+    return hurr_paths;
 };
 
 function getCatColor (wind_speed_knots) {
+    // category 5
     if (wind_speed_knots >= 157) {
         return "#FF6060";
     }
+    // category 4
     else if (wind_speed_knots >= 113) {
         return "#FE8F31";
     }
+    // category 3
     else if (wind_speed_knots >= 96) {
         return "#FFC146";
-    } else if (wind_speed_knots >= 83) {
+    }
+    // category 2
+    else if (wind_speed_knots >= 83) {
         return "#FFE775";
-    } else if (wind_speed_knots >= 64) {
+    } 
+    // category 1
+    else if (wind_speed_knots >= 64) {
         return "#FFFACB";
-    } else {
+    } 
+    // tropical storm or lower
+    else {
         return "#00FAF4";
     }
 };
@@ -58,46 +71,40 @@ function createMap(hurricane, category) {
     myMap.removeLayer(hurricanes);
    
     hurr_paths = [];
-    let col;
-    if (category == 1){
-        col = cat1;
-    }
-    else if (category == 2){
-        col = cat2;
-    }
-    else if (category == 3){
-        col = cat3;
-    }
-    else if (category == 4){
-        col = cat4;
-    }
-    else if (category == 5){
-        col = cat5;
-    }
 
     coordinates = path[hurricane].coords;
-    hurr_paths.push(color_path(coordinates, col));
 
+    wind_speed_knots = path['Janet 1955'].max_wind_knots;
+    colors = [];
+    for (let i = 0; i < wind_speed_knots.length; i++) {
+        colors.push(getCatColor(wind_speed_knots[i]));
+    };
+
+    create_path(coordinates, colors, hurr_paths);
 
     hurricanes = L.layerGroup(hurr_paths);
 
     layerControl.addOverlay(hurricanes, hurricane);
-
-
 };
 
 function createInitMap() {
 
     coordinates = path['Janet 1955'].coords;
-    // console.log(coordinates);
-    hurr_paths.push(create_path(coordinates));
+    wind_speed_knots = path['Janet 1955'].max_wind_knots;
+    colors = [];
+
+    for (let i = 0; i < wind_speed_knots.length; i++) {
+        colors.push(getCatColor(wind_speed_knots[i]));
+    };
+
+    create_path(coordinates, colors, hurr_paths);
 
 
     var street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     });
 
-    var baseMaps = {
+    baseMaps = {
         "Street Map": street,
     };
 
@@ -108,24 +115,21 @@ function createInitMap() {
     };
 
     // create map with layers "on" when first loaded
-    myMap = L.map("map", {
+    myMap = L.map('map', {
         editable: true,
         center: [
         28, -60
         ],
         zoom: 2.5,
-        layers: [street, hurricanes]
+        layers: [street]
+        // layers: [street, hurricanes],
+        // would love to make this ^ work
     });
+
+    console.log(myMap);
 
     layerControl = L.control.layers(baseMaps, overlayMaps, {
         collapsed: false
     }).addTo(myMap);
-
-    // myMap.eachLayer(function (layer) {
-    //     console.log(layer)
-    // });
-
-    // leaflet_id = 
-    // console.log(hurricanes._leaflet_id)
     
 };
