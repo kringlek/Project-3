@@ -21,7 +21,7 @@ var cat5 = '#a50f15';
 function create_path (coords) {
     line = coords;
     options = {
-        color: cat4
+        color: "black"
     }
     return L.polyline(line, options);
 };
@@ -34,14 +34,29 @@ function color_path (coords, hexcol) {
     return L.polyline(line, options);
 };
 
+function getCatColor (wind_speed_knots) {
+    if (wind_speed_knots >= 157) {
+        return "#FF6060";
+    }
+    else if (wind_speed_knots >= 113) {
+        return "#FE8F31";
+    }
+    else if (wind_speed_knots >= 96) {
+        return "#FFC146";
+    } else if (wind_speed_knots >= 83) {
+        return "#FFE775";
+    } else if (wind_speed_knots >= 64) {
+        return "#FFFACB";
+    } else {
+        return "#00FAF4";
+    }
+};
+
 function createMap(hurricane, category) {
 
-    // hurricanes.removeLayer(1);
     layerControl.removeLayer(hurricanes);
     myMap.removeLayer(hurricanes);
-    // hurr_paths.forEach(function (item) {
-    //     myMap.removeLayer(item)
-    // });
+   
     hurr_paths = [];
     let col;
     if (category == 1){

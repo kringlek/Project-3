@@ -28,9 +28,15 @@ p {
 
 .btn {
     color: white;
-    border: black;
+    border: white;
     background-color: dimgrey;
+    box-shadow: 0 8px 16px 0 black, 0 6px 20px 0 black;
 }
+
+.btn:hover {
+    background-color: black;
+}
+
 
 .well {
     background-color: black;
