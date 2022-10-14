@@ -55,3 +55,23 @@ p {
 html {
     height: 540px;
 }
+
+
+.legend {
+    padding: 10px;
+    line-height: 20px;
+    background: white;
+    color: 'black';
+  }
+  
+  .legend span {
+    position: relative;
+    margin-left: 5px;
+    /* bottom: 3px; */
+  }
+  
+  .legend i {
+    width: 20px;
+    height: 20px;
+    float: left;
+  }

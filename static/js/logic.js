@@ -131,5 +131,19 @@ function createInitMap() {
     layerControl = L.control.layers(baseMaps, overlayMaps, {
         collapsed: false
     }).addTo(myMap);
+
+    var legend = L.control({position: "bottomright"});
+    legend.onAdd = function () {
+        var div = L.DomUtil.create("div", "legend");
+        div.innerHTML += '<span>Category 5</span><i style="background: #FF6060"></i><br>';
+        div.innerHTML += '<span>Category 4</span><i style="background: #FE8F31"></i><br>';
+        div.innerHTML += '<span>Category 3</span><i style="background: #FFC146"></i><br>';
+        div.innerHTML += '<span>Category 2</span><i style="background: #FFE775"></i><br>';
+        div.innerHTML += '<span>Category 1</span><i style="background: #FFFACB"></i><br>';
+        div.innerHTML += '<span>Tropical Storm or Less</span><i style="background: #00FAF4"></i><br>';
+        return div;
+    };
+
+    legend.addTo(myMap);
     
 };
