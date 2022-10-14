@@ -21,7 +21,7 @@ var cat5 = '#a50f15';
 function create_path (coords) {
     line = coords;
     options = {
-        color: "black"
+        color: cat4
     }
     return L.polyline(line, options);
 };
