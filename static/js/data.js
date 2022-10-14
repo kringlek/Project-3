@@ -52,7 +52,7 @@ d3.json(url).then(function(data){
         // console.log(information.Name_year[id]);
         // plotter(numerical[0]);
         demoInfo(information, id);
-        createMap(information.Name_year[id]);
+        createMap(information.Name_year[id], information.category[id]);
     }
     init();
 });

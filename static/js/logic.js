@@ -6,6 +6,11 @@ var overlayMaps
 var layerControl
 var baseMaps
 var leaflet_id
+var cat1 = '#fee5d9';
+var cat2 = '#fcae91';
+var cat3 = '#fb6a4a';
+var cat4 = '#de2d26';
+var cat5 = '#a50f15';
 
 // d3.json(hurr_url).then(function(data) {
 //     path = data;
@@ -21,7 +26,15 @@ function create_path (coords) {
     return L.polyline(line, options);
 };
 
-function createMap(hurricane) {
+function color_path (coords, hexcol) {
+    line = coords;
+    options = {
+        color: hexcol
+    }
+    return L.polyline(line, options);
+};
+
+function createMap(hurricane, category) {
 
     // hurricanes.removeLayer(1);
     layerControl.removeLayer(hurricanes);
@@ -30,11 +43,25 @@ function createMap(hurricane) {
     //     myMap.removeLayer(item)
     // });
     hurr_paths = [];
-
-    
+    let col;
+    if (category == 1){
+        col = cat1;
+    }
+    else if (category == 2){
+        col = cat2;
+    }
+    else if (category == 3){
+        col = cat3;
+    }
+    else if (category == 4){
+        col = cat4;
+    }
+    else if (category == 5){
+        col = cat5;
+    }
 
     coordinates = path[hurricane].coords;
-    hurr_paths.push(create_path(coordinates));
+    hurr_paths.push(color_path(coordinates, col));
 
 
     hurricanes = L.layerGroup(hurr_paths);
