@@ -6,12 +6,12 @@ var catdata
 var information
 d3.json(caturl).then(function(data){
     catdata = data;
-    console.log(data)
+    // console.log(data)
 });
 
 d3.json(hurr_url).then(function(data) {
     path = data;
-    console.log(data);
+    // console.log(data);
 });
 
 function getKeyByValue(object, value) {
@@ -21,7 +21,7 @@ d3.json(url).then(function(data){
     information = data;
     test = information.Name;
     test2 = Object.keys(test);
-    console.log(information);
+    // console.log(information);
     names = information.Name_year;
     years = information.Year;
     // for (let i =0; i < test2.length; i++){
