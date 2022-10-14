@@ -19,10 +19,18 @@ var colors
 
 function create_path (coords, colors, hurr_paths) {
     coordinates = [];
-    for (let i = 0; i < colors.length; i++) {
+    loop_max = colors.length - 1;
+    for (let i = 0; i < loop_max; i++) {
         
         if (colors[i] == colors[i+1]) {
             coordinates.push(coords[i])
+            if (i == loop_max - 1) {
+                options = {
+                    color: colors[i]
+                }
+                hurr_paths.push(L.polyline(coordinates, options));
+                coordinates = [];
+            };
         } else {
             coordinates.push(coords[i]);
             coordinates.push(coords[i+1]);
@@ -33,7 +41,7 @@ function create_path (coords, colors, hurr_paths) {
             hurr_paths.push(L.polyline(coordinates, options));
             coordinates = [];
         };
-    }
+    };
 
     return hurr_paths;
 };
@@ -74,7 +82,7 @@ function createMap(hurricane, category) {
 
     coordinates = path[hurricane].coords;
 
-    wind_speed_knots = path['Janet 1955'].max_wind_knots;
+    wind_speed_knots = path[hurricane].max_wind_knots;
     colors = [];
     for (let i = 0; i < wind_speed_knots.length; i++) {
         colors.push(getCatColor(wind_speed_knots[i]));
