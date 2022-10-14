@@ -1,22 +1,22 @@
 body {
     color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    
 }
 
 .jumbotron {
     background-image: url("https://www.ready.gov/sites/default/files/2020-05/hurricane-ocean-waves.jpg");
     background-size: cover;
     height: 100%;
+    color: white;
+    text-shadow: 2px 2px 20px black;
+    font-weight: bolder;
     
 }
 
-h1 {
-    color: white;
-    text-shadow: 2px 2px 5px #000000;
-    
-}
 
 .panel-default > .panel-heading-custom{
-    background-color: black;
+    background-color: dimgrey;
     color: white;
 }
 
@@ -29,7 +29,7 @@ p {
 .btn {
     color: white;
     border: black;
-    background-color: black;
+    background-color: dimgrey;
 }
 
 .well {
@@ -39,6 +39,7 @@ p {
 
 #selDataset {
     color: black;
+    text-align: left;
 }
 #sample-metadata {
     color: black;
