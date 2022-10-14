@@ -40,7 +40,7 @@ d3.json(most_damaged_url).then(function (data) {
         x: xresult,
         y: yresult,
         text: barText,
-        name: "Damage ($) by Hurricane",
+        name: "Damage ($)",
         type: "bar"
         // orientation: "h"
     };
@@ -49,9 +49,9 @@ d3.json(most_damaged_url).then(function (data) {
     let trace62 = {
         x: xresult,
         y: y2result,
-        text: barText2,
+        // text: barText2,
         //text: reversedData.map(object => object.Name),
-        name: "Fatalities by Hurricane",
+        name: "Fatalities",
         type: "bar",
         // orientation: "v",
         yaxis: 'y2'

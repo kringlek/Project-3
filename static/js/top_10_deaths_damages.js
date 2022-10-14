@@ -34,7 +34,7 @@ d3.json(most_fatalities_url).then(function (data) {
         x: xresult,
         y: yresult,
         text: barText,
-        name: "Fatalities by Hurricane",
+        name: "Fatalities",
         type: "bar"
     };
 
@@ -42,8 +42,8 @@ d3.json(most_fatalities_url).then(function (data) {
     let trace82 = {
         x: xresult,
         y: y2result,
-        text: barText2,
-        name: "Damage ($) by Hurricane",
+        // text: barText2,
+        name: "Damage ($)",
         type: "bar",
         yaxis: 'y2'
     };
