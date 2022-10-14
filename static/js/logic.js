@@ -5,6 +5,7 @@ var hurricanes
 var overlayMaps
 var layerControl
 var baseMaps
+var leaflet_id
 
 // d3.json(hurr_url).then(function(data) {
 //     path = data;
@@ -22,7 +23,15 @@ function create_path (coords) {
 
 function createMap(hurricane) {
 
+    // hurricanes.removeLayer(1);
+    layerControl.removeLayer(hurricanes);
+    myMap.removeLayer(hurricanes);
+    // hurr_paths.forEach(function (item) {
+    //     myMap.removeLayer(item)
+    // });
     hurr_paths = [];
+
+    
 
     coordinates = path[hurricane].coords;
     hurr_paths.push(create_path(coordinates));
@@ -50,14 +59,14 @@ function createInitMap() {
         "Street Map": street,
     };
 
-    var hurricanes = L.layerGroup(hurr_paths);
+    hurricanes = L.layerGroup(hurr_paths);
 
-    var overlayMaps = {
-        "Janet 1955": hurricanes
+    overlayMaps = {
+        "Hurricane": hurricanes
     };
 
     // create map with layers "on" when first loaded
-    var myMap = L.map("map", {
+    myMap = L.map("map", {
         editable: true,
         center: [
         28, -60
@@ -69,4 +78,12 @@ function createInitMap() {
     layerControl = L.control.layers(baseMaps, overlayMaps, {
         collapsed: false
     }).addTo(myMap);
+
+    // myMap.eachLayer(function (layer) {
+    //     console.log(layer)
+    // });
+
+    // leaflet_id = 
+    // console.log(hurricanes._leaflet_id)
+    
 };
