@@ -1,5 +1,5 @@
-const url = 'test.json'
-const caturl = 'category.json'
+const url = './../static/js/test.json'
+const caturl = './../static/js/category.json'
 
 var catdata
 var information
@@ -26,7 +26,7 @@ d3.json(url).then(function(data){
         startInfo(inital);
         plotter(information);
     }
-    demoInfo(data);
+    // demoInfo(data);
     let nameArr = Object.values(names);
     let filterednames = [...new Set(nameArr)];
     // let yearArr = Object.values(years);
@@ -41,9 +41,9 @@ d3.json(url).then(function(data){
         let dropdownMenu = d3.select('#selDataset');
         let dataset = dropdownMenu.property('value');
         let id = getKeyByValue(information.Name_year, dataset)
-        console.log(id);
+        // console.log(id);
         // plotter(numerical[0]);
-        // demoInfo(information);
+        demoInfo(information, id);
     }
     init();
 });

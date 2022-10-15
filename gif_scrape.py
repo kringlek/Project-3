@@ -36,12 +36,15 @@ def scrape_gifs():
         href_array.append(link.get('href'))
         # if WHATEVER does not end in '.gif' drop from array
         
-
         # print(href_array)
 
         df = pd.DataFrame(href_array, columns=['gif_url']) 
 
+        df['id'] = df.index + 1
+
         gif_df = df[df['gif_url'].str.endswith('.gif')]
+
+        # gif_df["id"] = gif_df.index
 
     print(gif_df)
 
@@ -49,8 +52,6 @@ def scrape_gifs():
         #     475, 482, 485, 487, 490, 492, 497, 498, 499, 503] ,axis=0)
     
     # print(gif_df.filter(items=[0, 24, 100, 107, 110, 128, 159, 191, 194, 449, 462, 465,
-    #         472, 475, 482, 485, 487, 490, 492, 497, 498, 499, 503],axis=0))
-    # print(gif_df.filter(items=[0, 1, 3, 4, 5, 10, 15, 20, 25, 50, 75, 465,
     #         472, 475, 482, 485, 487, 490, 492, 497, 498, 499, 503],axis=0))
 
     browser.quit()
