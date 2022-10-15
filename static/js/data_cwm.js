@@ -16,24 +16,24 @@ let sorteddamages = data.sort(function(a, b) {
         return b.Damage - a.Damage;
       });
       
-console.log(sorteddamages)
+// console.log(sorteddamages)
 
     
 //Slice out the top ten storms
 let slicedData = sorteddamages.slice(0, 10).reverse();
 
 
-    console.log(slicedData)
+    // console.log(slicedData)
     let xresult = slicedData.map(a => a.NameYear);
     let yresult = slicedData.map(a => a.Damage);
     
     // descriptive text to give context to chart bars
     let barText = slicedData.map(a => a.AreasAffected);
-    console.log(barText)
+    // console.log(barText)
     
     //prepare xaxis for fatalities
     let x2result = slicedData.map(a => a.Deaths);
-    console.log(x2result)
+    // console.log(x2result)
 
     // Trace1 for Damages ** NOTE THE REVERSAL OF X AND Y RESULTS for  Orientation: "h"
         let trace6 = {

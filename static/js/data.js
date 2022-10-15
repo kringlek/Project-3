@@ -1,11 +1,17 @@
 const url = './../static/js/test.json'
 const caturl = './../static/js/category.json'
+const hurr_url = './../static/js/hurricane_path.json'
 
 var catdata
 var information
 d3.json(caturl).then(function(data){
     catdata = data;
-    console.log(data)
+    // console.log(data)
+});
+
+d3.json(hurr_url).then(function(data) {
+    path = data;
+    // console.log(data);
 });
 
 function getKeyByValue(object, value) {
@@ -15,17 +21,18 @@ d3.json(url).then(function(data){
     information = data;
     test = information.Name;
     test2 = Object.keys(test);
-    console.log(information);
+    // console.log(information);
     names = information.Name_year;
     years = information.Year;
     // for (let i =0; i < test2.length; i++){
     //     console.log(test[i]);
     // }
     function init(){
-        let inital = information
+        let inital = information;
+        createInitMap();
         startInfo(inital);
         plotter(information);
-    }
+    };
     // demoInfo(data);
     let nameArr = Object.values(names);
     let filterednames = [...new Set(nameArr)];
@@ -40,10 +47,12 @@ d3.json(url).then(function(data){
     function allTogether(){
         let dropdownMenu = d3.select('#selDataset');
         let dataset = dropdownMenu.property('value');
-        let id = getKeyByValue(information.Name_year, dataset)
+        let id = getKeyByValue(information.Name_year, dataset);
         // console.log(id);
+        // console.log(information.Name_year[id]);
         // plotter(numerical[0]);
         demoInfo(information, id);
+        createMap(information.Name_year[id], information.category[id]);
     }
     init();
 });

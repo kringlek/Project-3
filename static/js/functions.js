@@ -43,7 +43,7 @@ function plotter(data) {
     counts.push(getOccurrence(months, 'August'));
     counts.push(getOccurrence(months, 'September'));
     counts.push(getOccurrence(months, 'October'));
-    console.log(counts);
+    // console.log(counts);
     let trace1 = {
         x: wind,
         y: damages,
