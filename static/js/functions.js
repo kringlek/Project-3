@@ -12,7 +12,7 @@ function demoInfo(data2, key) {
     for (let i = 0; i < keys.length -1; i++) {
         let li = document.createElement('li');
         li.innerText=`${keys[i]}: ${values[i][key]}`;
-        console.log(values[i][0]);
+        // console.log(values[i][0]);
         ol.appendChild(li);
     }
 
@@ -115,26 +115,40 @@ function categories(categorydata) {
     }
 };
 
-let dataEl = document.getElementById('selDataset')
+// let dataEl = document.getElementById('selDataset')
 let head_url = "https://bmcnoldy.rsmas.miami.edu/"
 
-dataEl.addEventListener('change', show_gif)
+// dataEl.addEventListener('change', show_gif)
 
 
-gif_data = Object.values(data2['gif_url'])
-let gifDiv = document.getElementById('hurricane_gif')
-gifDiv.href = head_url + gif_data
-console.log("it changed, probably");
+// gif_data = Object.values(data2['gif_url'])
+// let gifDiv = document.getElementById('hurricane_gif')
+// gifDiv.href = head_url + gif_data
+// console.log("it changed, probably");
 
-function show_gif(e) {
-    let gifDiv = document.getElementById('hurricane_gif')
-    gifDiv.href = head_url + gif_data
-    console.log("test");
-}
+// function show_gif(e) {
+//     let gifDiv = document.getElementById('hurricane_gif')
+//     gifDiv.href = head_url + gif_data
+//     console.log("test");
+// }
 
-$('#selDataset').change(function(){
+$('#selDataset').change(function(data3){
     $('#hurricane_gif').html("")
-    let hurricane_name = $(this).val();
+    let html = '';
+    var keys = Object.keys(data3);
+    var values = Object.values(data3);
+    let hurricane_name = $(this).children('option:selected').val();
+    let split_name = hurricane_name.split(' ');
+    let clean_name = split_name[0];
+    if (clean_name == Object.values(data3)) {
+        let full_url = head_url + Object.values(data)['gif_url']
+        html = `<div id="gif_jawn" href="${full_url}"></div>`
+        return html;
+    }
+    $('#hurricane_gif').html(html)
+    console.log(clean_name);
+
+
     
 })
 

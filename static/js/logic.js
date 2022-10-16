@@ -134,7 +134,7 @@ function createInitMap() {
         // would love to make this ^ work
     });
 
-    console.log(myMap);
+    // console.log(myMap);
 
     layerControl = L.control.layers(baseMaps, overlayMaps, {
         collapsed: false
