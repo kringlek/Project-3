@@ -12,7 +12,7 @@ function getAllIndexes(arr, val) {
 };
 function demoInfo(data2, key) {
     var keys = Object.keys(data2);
-    keys[5] = 'Wind Speed Max';
+    keys[5] = 'Wind Speed Max (knots)';
     keys[11] = 'Maximum Category';
     keys.splice(9,2);
     keys.splice(3,1);
@@ -142,3 +142,7 @@ function get_scraped_img(id) {
     };
     return false;
 };
+
+function removeImg() {
+    
+}

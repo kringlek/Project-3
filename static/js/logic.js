@@ -5,11 +5,6 @@ var hurricanes
 var overlayMaps
 var layerControl
 var baseMaps
-// var cat1 = '#fee5d9';
-// var cat2 = '#fcae91';
-// var cat3 = '#fb6a4a';
-// var cat4 = '#de2d26';
-// var cat5 = '#a50f15';
 var wind_speed_knots
 var colors
 
@@ -155,3 +150,84 @@ function createInitMap() {
     legend.addTo(myMap);
     
 };
+
+// input ex: getMaxWind("Janet 1955")
+function getMaxWind(hurricane) {
+    var max_wind = Math.max.apply(Math, path[hurricane].max_wind_knots);
+    return max_wind;
+};
+
+// input ex: getMaxCat("Janet 1955")
+function getMaxCat(hurricane) {
+    max_wind = getMaxWind(hurricane);
+    if (max_wind >= 157) {
+        return "5";
+    } else if (max_wind >= 113) {
+        return "4";
+    } else if (max_wind >= 96) {
+        return "3";
+    } else if (max_wind >= 83) {
+        return "2";
+    } else if (max_wind >= 64) {
+        return "1";
+    } else {
+        return "Tropical Storm";
+    }
+};
+
+// input ex: getStartDate("Janet 1955")
+function getStartDate(hurricane) {
+    start_month = path[hurricane].month.at(0);
+    start_day = path[hurricane].day.at(0);
+    start_year = path[hurricane].year.at(0);
+    return (month(start_month) + " " + start_day + ", " + start_year);
+};
+
+// input ex: getEndDate("Janet 1955")
+function getEndDate(hurricane) {
+    end_month = path[hurricane].month.at(-1);
+    end_day = path[hurricane].day.at(-1);
+    end_year = path[hurricane].year.at(-1);
+    return (month(end_month) + " " + end_day + ", " + end_year);
+
+};
+
+function month(month) {
+    if (month == "01") {
+        return "January";
+    }
+    else if (month == "02") {
+        return "February";
+    }
+    else if (month == "03") {
+        return "March";
+    }
+    else if (month == "04") {
+        return "April";
+    }
+    else if (month == "05") {
+        return "May";
+    }
+    else if (month == "06") {
+        return "June";
+    }
+    else if (month == "07") {
+        return "July";
+    }
+    else if (month == "08") {
+        return "August";
+    }
+    else if (month == "09") {
+        return "September";
+    }
+    else if (month == "10") {
+        return "October";
+    }
+    else if (month == "11") {
+        return "November";
+    }
+    else if (month == "12") {
+        return "December";
+    };
+};
+
