@@ -1,9 +1,12 @@
 const url = './../static/js/test.json'
 const caturl = './../static/js/category.json'
 const hurr_url = './../static/js/hurricane_path.json'
+const web_url = './../static/js/gif_scrape.json'
 
 var catdata
 var information
+var scraped
+
 d3.json(caturl).then(function(data){
     catdata = data;
     // console.log(data)
@@ -13,6 +16,12 @@ d3.json(hurr_url).then(function(data) {
     path = data;
     // console.log(data);
 });
+
+d3.json(web_url).then(function(data) {
+    scraped = data;
+    console.log(data);
+});
+
 
 function getKeyByValue(object, value) {
     return Object.keys(object).find(key => object[key] === value);
@@ -51,6 +60,14 @@ d3.json(url).then(function(data){
         // console.log(id);
         // console.log(information.Name_year[id]);
         // plotter(numerical[0]);
+        if (get_scraped_img(information.Name_year[id]) != false) {
+            var img = document.createElement("img");
+            img.src = "https://bmcnoldy.rsmas.miami.edu/" + get_scraped_img(information.Name_year[id]);
+            let web_div = document.getElementById('web');
+            web_div.appendChild(img);
+
+        };
+
         demoInfo(information, id);
         createMap(information.Name_year[id], information.category[id]);
     }
