@@ -15,7 +15,6 @@ d3.json(caturl).then(function(data){
 
 d3.json(hurr_url).then(function(data) {
     path = data;
-    // console.log(data);
 });
 
 d3.json(web_url).then(function(data) {
@@ -62,11 +61,7 @@ d3.json(url).then(function(data){
         // console.log(information.Name_year[id]);
         // plotter(numerical[0]);
 
-        // if (web_div.hasChildNodes) {
-        //     web_div.removeChild(img);
-        // };
         if (get_scraped_img(information.Name_year[id]) != false) {
-            // img = document.createElement("img");
             let web_div = document.getElementById('web');
             img.src = "https://bmcnoldy.rsmas.miami.edu/" + get_scraped_img(information.Name_year[id]);
             web_div.appendChild(img);

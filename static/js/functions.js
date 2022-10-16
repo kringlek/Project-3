@@ -142,7 +142,3 @@ function get_scraped_img(id) {
     };
     return false;
 };
-
-function removeImg() {
-    
-}

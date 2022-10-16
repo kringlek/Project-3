@@ -11,7 +11,6 @@ var colors
 
 // if color 0 equals color 1, then add both to list and continue
 // else add both to list and then create final path
-
 function create_path (coords, colors, hurr_paths) {
     coordinates = [];
     loop_max = colors.length - 1;
@@ -128,8 +127,6 @@ function createInitMap() {
         // layers: [street, hurricanes],
         // would love to make this ^ work
     });
-
-    // console.log(myMap);
 
     layerControl = L.control.layers(baseMaps, overlayMaps, {
         collapsed: false
