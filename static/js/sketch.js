@@ -6,15 +6,15 @@ var song;
 var btn2;
 var amp;
 
-// function preload() {
-//   song = loadSound('./../Data/hurricane.mp3');
-// }
+function preload() {
+  song = loadSound('http://127.0.0.1:5502//Data/hurricane.mp3');
+}
 
 function setup() {
   var canvas = createCanvas(75, 45);
   canvas.parent("sketch-holder");
 
-  song = loadSound('./../Data/hurricane.mp3', loaded);
+  // song = loadSound('./../Data/hurricane.mp3', loaded);
   amp = new p5.Amplitude();
 
   btn2 = createButton('Play');
