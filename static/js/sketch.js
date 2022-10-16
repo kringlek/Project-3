@@ -3,21 +3,32 @@
 // http://patreon.com/codingtrain
 // Code for: https://youtu.be/NCCHQwNAN6Y
 var song;
-var button;
+var btn2;
 var amp;
 
+// function preload() {
+//   song = loadSound('./../Data/hurricane.mp3');
+// }
+
 function setup() {
-   canvas = createCanvas(75, 45);
-   song = loadSound('./../Data/hurricane.mp3', loaded);
-   amp = new p5.Amplitude();
-   background(192,192,192);
-   
-   canvas.parent('sketch-holder')
-}
-function loaded() {
+  var canvas = createCanvas(75, 45);
+  canvas.parent("sketch-holder");
+
+  song = loadSound('./../Data/hurricane.mp3', loaded);
+  amp = new p5.Amplitude();
+
   btn2 = createButton('Play');
+  btn2.parent("sketch-holder");
   btn2.mousePressed(togglePlaying);
-  }
+
+  background(192,192,192);
+   
+};
+
+function loaded() {
+  console.log("loaded");
+  
+};
 
 
 function draw() {
@@ -28,7 +39,7 @@ function draw() {
   
     fill("white");
     ellipse(width / 2, height / 2, diam, diam);
-  }
+  };
 
 function togglePlaying() {
   if (!song.isPlaying()) {
@@ -38,5 +49,5 @@ function togglePlaying() {
   } else {
     song.stop();
     btn2.html('Play');
-  }
-}
+  };
+};
