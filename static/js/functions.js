@@ -3,13 +3,23 @@ function getOccurrence(array, value) {
     array.forEach((v) => (v === value && count++));
     return count;
 };
+function getAllIndexes(arr, val) {
+    var indexes = [], i;
+    for(i = 0; i < arr.length; i++)
+        if (arr[i] === val)
+            indexes.push(i);
+    return indexes;
+};
 function demoInfo(data2, key) {
     var keys = Object.keys(data2);
     keys[5] = 'Wind Speed Max';
     keys[11] = 'Maximum Category';
     keys.splice(9,2);
+    keys.splice(3,1);
     var values = Object.values(data2);
+    console.log(values);
     values.splice(9,2);
+    values.splice(3,1);
     var ol = document.getElementById('metalist');
     var listy = document.getElementById('metalist');
     listy.innerHTML = '';
@@ -26,8 +36,10 @@ function startInfo(data3) {
     keys[5] = 'Wind Speed Max';
     keys[11] = 'Maximum Category';
     keys.splice(9,2);
+    keys.splice(3,1);
     var values = Object.values(data3);
     values.splice(9,2);
+    values.splice(3,1);
     var ol = document.getElementById('metalist');
     var listy = document.getElementById('metalist');
     listy.innerHTML = '';
