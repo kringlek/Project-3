@@ -5,7 +5,11 @@ function getOccurrence(array, value) {
 };
 function demoInfo(data2, key) {
     var keys = Object.keys(data2);
+    keys[5] = 'Wind Speed Max';
+    keys[11] = 'Maximum Category';
+    keys.splice(9,2);
     var values = Object.values(data2);
+    values.splice(9,2);
     var ol = document.getElementById('metalist');
     var listy = document.getElementById('metalist');
     listy.innerHTML = '';
@@ -19,7 +23,11 @@ function demoInfo(data2, key) {
 function startInfo(data3) {
     // console.log(data3);
     var keys = Object.keys(data3);
+    keys[5] = 'Wind Speed Max';
+    keys[11] = 'Maximum Category';
+    keys.splice(9,2);
     var values = Object.values(data3);
+    values.splice(9,2);
     var ol = document.getElementById('metalist');
     var listy = document.getElementById('metalist');
     listy.innerHTML = '';
