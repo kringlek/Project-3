@@ -12,7 +12,7 @@ d3.json(most_fatalities_url).then(function (data) {
 
     //Slice out the top ten storms
     let slicedData = sortedfatalities.slice(0, 10);
-   
+
 
     // console.log(slicedData)
     let xresult = slicedData.map(a => a.NameYear);
@@ -32,20 +32,22 @@ d3.json(most_fatalities_url).then(function (data) {
     // Trace1 for Damages 
     let trace81 = {
         x: xresult,
-        y: yresult,
-        text: barText,
-        name: "Fatalities",
-        type: "bar"
+        y: y2result,
+        // text: barText2,
+        name: "Damage ($)",
+        type: "bar",
+        yaxis: 'y2',
+
     };
 
     // Trace2 for fatalities
     let trace82 = {
         x: xresult,
-        y: y2result,
-        // text: barText2,
-        name: "Damage ($)",
+        y: yresult,
+        text: barText,
+        name: "Fatalities",
         type: "bar",
-        yaxis: 'y2'
+        yaxis: 'y'
     };
 
     let trace83 = {
@@ -55,7 +57,7 @@ d3.json(most_fatalities_url).then(function (data) {
         hoverinfo: 'none',
         showlegend: false
     };
-    
+
     let trace84 = {
         x: xresult,
         y: [0],
@@ -63,6 +65,7 @@ d3.json(most_fatalities_url).then(function (data) {
         hoverinfo: 'none',
         showlegend: false,
         yaxis: 'y2'
+
     };
 
     // Data array
@@ -73,7 +76,7 @@ d3.json(most_fatalities_url).then(function (data) {
         title: {
             text: "Top 10 Hurricanes by Fatalities compared to the damage they caused"
         },
-        
+
         xaxis: {
             text: "Storm Name & Year"
         },
@@ -92,7 +95,7 @@ d3.json(most_fatalities_url).then(function (data) {
             t: 100,
             b: 100
         },
-        barmode:'group'
+        barmode: 'group'
     };
 
     // Render the plot to the div tag 
