@@ -1,4 +1,4 @@
-from turtle import pd
+# from turtle import pd
 from splinter import Browser
 from bs4 import BeautifulSoup as bs
 import time
@@ -12,137 +12,109 @@ from IPython.display import display
 with pd.option_context('display.max_rows', 500, 'display.max_columns', 3):
     
 
-    def scrape_gifs():      
-            # Set up Splinter
-        executable_path = {'executable_path': ChromeDriverManager().install()}
-        browser = Browser('chrome', **executable_path, headless=False)
+    def get_hurr_ids():
+        hurricane_data = pd.read_json("static/js/test.json")
+        hurricane_data["Year"] = hurricane_data["Year"].astype(str)
+        hurricane_data["id"] = hurricane_data["Name"].str.lower() + hurricane_data["Year"].str.slice(start=2)
+        return hurricane_data["id"].unique().tolist()
 
-        url = "https://bmcnoldy.rsmas.miami.edu/tropics/radar/"
-        browser.visit(url)
+def scrape_gifs():      
+    # Set up Splinter
+    executable_path = {'executable_path': ChromeDriverManager().install()}
+    browser = Browser('chrome', **executable_path, headless=False)
 
-        time.sleep(1)
+    url = "https://bmcnoldy.rsmas.miami.edu/tropics/radar/"
+    browser.visit(url)
 
-        # Scrape page into Soup
-        html = browser.html
-        soup = bs(html, "html.parser")
+    time.sleep(1)
+
+    # Scrape page into Soup
+    html = browser.html
+    soup = bs(html, "html.parser")
 
 
-    #Read in Data from CSV
-        hurricane_csv = "Data/hurricane_clean_dataset.csv"
-        hurricane_data = pd.read_csv(hurricane_csv)
-        hurricane_data.head()
-        df1 = hurricane_data
-        nums = '\d+'
+    #Read in Data from json
+    hurricane_data = get_hurr_ids()
+    nums = '\d+'
 
 
     # for loop for getting all of the hrefs on the page and filtering to only return the .gifs
-        href_array = []
-        for link in soup.find_all('a', attrs={'href': re.compile("^tropics")}):
-            href_array.append(link.get('href'))
-            # if WHATEVER does not end in '.gif' drop from array
+    href_array = []
+    hurricanes = []
+    for link in soup.find_all('a', attrs={'href': re.compile("^tropics")}):
+        # print(link)
+        href_link = link.get('href')
+        # print(href_link)
+        
+        for hurricane in hurricane_data:
+            hurricane_link = "tropics/" + hurricane
+            if href_link.startswith(hurricane_link):
+                # print()
+                href_array.append(href_link)
+                hurricanes.append(hurricane)
+        
+        
+        # print(href_array)
 
-            # print(href_array)
+    df = pd.DataFrame({'hurricane': hurricanes,
+                        'gif_url': href_array})
+    # print(len(df.index))
+    # print(df.head())
 
+    # if WHATEVER does not end in '.gif' drop from array
+    gif_df = df[df['gif_url'].str.endswith('.gif')]
 
-            df = pd.DataFrame(href_array, columns=['gif_url']) 
+    # clean up df
+    gif_df = gif_df.drop_duplicates(subset=["hurricane"], keep='last')
+    gif_df = gif_df.reset_index(drop=True)
+    gif_df["name"] = gif_df["hurricane"].str.slice(stop=-2)
+    gif_df["name"] = gif_df["name"].str.capitalize()
+    gif_df["year"] = gif_df["hurricane"].str.slice(start=-2)
+    gif_df["full_year"] = gif_df["year"].apply(lambda x: "20" + x if int(x) < 50 else "19" + x)
+    gif_df["id"] = gif_df["name"] + " " + gif_df["full_year"]
 
-            # df['id'] = df.index + 1
+    final_df = gif_df[["gif_url", "id"]]
 
-        gif_df = df[df['gif_url'].str.endswith('.gif')]
+    # print(gif_df.head())
+    # print(len(gif_df.index))
+    
+    final_df.to_json('static/js/gif_scrape.json')
 
-            # gif_df["id"] = gif_df.index
-    #     pd.set_option('display.height', 500)
-        # pd.set_option('display.max_rows', df.shape[0]+1)
-        # print(gif_df)
+    # print(gif_df)
 
         # gif_df.filter(items=[0, 24, 100, 107, 110, 128, 159, 191, 194, 449, 462, 465,472,
         # 475, 482, 485, 487, 490, 492, 497, 498, 499, 503] ,axis=0)
 
-        # print(gif_df.filter(items=[0, 24, 100, 107, 110, 128, 159, 191, 194, 449, 462, 465,
-        #         472, 475, 482, 485, 487, 490, 492, 497, 498, 499, 503],axis=0))
+    # for gif in href_array:
+    #     gif_name = gif.split('/')
+    #     gif_name_list = (re.split(nums, gif_name[1]))
+    #     # print(gif_name_list)
 
-        browser.quit()
+    #     joined_names = ' '.join(gif_name_list).split()
 
-        clean_name_array = []
-
-        for gif in href_array:
-            gif_name = gif.split('/')
-            gif_name_list = (re.split(nums, gif_name[1]))
-
-            # print(gif_name_list)
-
-            joined_names = ' '.join(gif_name_list).split()
-
-            # def clean_gif_names(x):
-            #     return list(dict.fromkeys(x))
-            clean_name_array.append(joined_names)   
-
-            # print(cleaned_names)
-
-        # clean_name_array = list(dict.fromkeys(clean_name_array))
-
-        # print(clean_name_array)
-
-        flat_list = [i for sublist in clean_name_array for i in sublist]
-
-        # print(flat_list)
-
-
-        final_series=pd.Series(flat_list)
-        myFinalList = pd.unique(final_series).tolist()
-        # print(myFinalList)
-
-        df_name = pd.DataFrame(myFinalList, columns=['name'])
-
-        # print(df_name)
-        # print(myFinalList)
-
-        gif_list1 = gif_df['gif_url'].tolist()
-
-        gif_name_list = myFinalList
-        threshold = 60
-
-        m1=[]
-        m2=[]
-
-        for i in gif_list1:
-            m1.append(process.extract(i, gif_name_list, limit=1))
+    #     def clean_gif_names(x):
+    #         return list(dict.fromkeys(x))
         
-        # print(m1)
-        
-        gif_df['match'] = m1
+    #     cleaned_names = clean_gif_names(joined_names)
 
-       # print(gif_df)
+    #     print(cleaned_names)
 
-        # print(gif_list1)
-        p=[]
-        for j in gif_df['match']:
-            for k in j:
-                if k[1]>=threshold:
-                    p.append(k[0])
-            m2.append(','.join([str(i) for i in p]))
-            p=[]
-        gif_df['match_real']=m2
-        print(gif_df.head(20))
+    # final_series=pd.Series(cleaned_names)
+    # myFinalList = pd.unique(final_series).tolist()
+    # print(myFinalList)
+    # print(href_array)
+    
+        # clean_gif_name = gif_name[1]
+        # print(clean_gif_name)
+
+    # print(good_gifs)
 
 
 
 
 
-
-
-
-
-    scrape_gifs()
-
-
-    # filter out name of hurricane from gif href url to be able to match to your data
-    # remove multiples of the same hurricanes
-    # concat page url with gif href
-    # append/join hurricane gifs to data set
-
-       # inside for loop create another for loop to remove empty strings from the results
-        # first append each gir_name_list into a list of lists for the for loop
-        # then run code inside that for loop that removes empty strings
-        # remove duplicate names from the list
-        # match name with hurricane gif url dropping any unmatched results
+# inside for loop create another for loop to remove empty strings from the results
+# first append each gir_name_list into a list of lists for the for loop
+# then run code inside that for loop that removes empty strings
+# remove duplicate names from the list
+# match name with hurricane gif url dropping any unmatched results

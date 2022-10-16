@@ -3,9 +3,23 @@ function getOccurrence(array, value) {
     array.forEach((v) => (v === value && count++));
     return count;
 };
+function getAllIndexes(arr, val) {
+    var indexes = [], i;
+    for(i = 0; i < arr.length; i++)
+        if (arr[i] === val)
+            indexes.push(i);
+    return indexes;
+};
 function demoInfo(data2, key) {
     var keys = Object.keys(data2);
+    keys[5] = 'Wind Speed Max (knots)';
+    keys[11] = 'Maximum Category';
+    keys.splice(9,2);
+    keys.splice(3,1);
     var values = Object.values(data2);
+    // console.log(values);
+    values.splice(9,2);
+    values.splice(3,1);
     var ol = document.getElementById('metalist');
     var listy = document.getElementById('metalist');
     listy.innerHTML = '';
@@ -21,7 +35,13 @@ function demoInfo(data2, key) {
 function startInfo(data3) {
     // console.log("data3" + data3);
     var keys = Object.keys(data3);
+    keys[5] = 'Wind Speed Max';
+    keys[11] = 'Maximum Category';
+    keys.splice(9,2);
+    keys.splice(3,1);
     var values = Object.values(data3);
+    values.splice(9,2);
+    values.splice(3,1);
     var ol = document.getElementById('metalist');
     var listy = document.getElementById('metalist');
     listy.innerHTML = '';
@@ -113,44 +133,14 @@ function categories(categorydata) {
     let trace6 = {
         
     }
+}
+
+function get_scraped_img(id) {
+    for (var i=0; i<Object.keys(scraped.id).length; i++) {
+        if (scraped.id[i]==id) {
+            img_index = parseInt(getKeyByValue(scraped.id, id));
+            return scraped.gif_url[img_index];
+        };
+    };
+    return false;
 };
-
-// let dataEl = document.getElementById('selDataset')
-let head_url = "https://bmcnoldy.rsmas.miami.edu/"
-
-// dataEl.addEventListener('change', show_gif)
-
-
-// gif_data = Object.values(data2['gif_url'])
-// let gifDiv = document.getElementById('hurricane_gif')
-// gifDiv.href = head_url + gif_data
-// console.log("it changed, probably");
-
-// function show_gif(e) {
-//     let gifDiv = document.getElementById('hurricane_gif')
-//     gifDiv.href = head_url + gif_data
-//     console.log("test");
-// }
-
-$('#selDataset').change(function(data3){
-    $('#hurricane_gif').html("")
-    let html = '';
-    var keys = Object.keys(data3);
-    var values = Object.values(data3);
-    let hurricane_name = $(this).children('option:selected').val();
-    let split_name = hurricane_name.split(' ');
-    let clean_name = split_name[0];
-    if (clean_name == Object.values(data3)) {
-        let full_url = head_url + Object.values(data)['gif_url']
-        html = `<div id="gif_jawn" href="${full_url}"></div>`
-        return html;
-    }
-    $('#hurricane_gif').html(html)
-    console.log(clean_name);
-
-
-    
-})
-
-
-

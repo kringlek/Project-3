@@ -5,7 +5,7 @@ var catdata
 var information
 d3.json(home_caturl).then(function(data){
     catdata = data;
-    console.log(data)
+    // console.log(data)
 });
 
 function getKeyByValue(object, value) {

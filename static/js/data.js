@@ -1,9 +1,13 @@
 const url = './../static/js/test.json'
 const caturl = './../static/js/category.json'
 const hurr_url = './../static/js/hurricane_path.json'
+const web_url = './../static/js/gif_scrape.json'
 
 var catdata
 var information
+var scraped
+var img
+
 d3.json(caturl).then(function(data){
     catdata = data;
     // console.log(data)
@@ -11,8 +15,12 @@ d3.json(caturl).then(function(data){
 
 d3.json(hurr_url).then(function(data) {
     path = data;
-    // console.log(data);
 });
+
+d3.json(web_url).then(function(data) {
+    scraped = data;
+});
+
 
 function getKeyByValue(object, value) {
     return Object.keys(object).find(key => object[key] === value);
@@ -43,6 +51,7 @@ d3.json(url).then(function(data){
         option.innerHTML=`<option value='${filterednames[i]}'>${filterednames[i]}</option>`
         selctor.appendChild(option);
     };
+    img = document.createElement("img");
     d3.selectAll('#selDataset').on('change', allTogether)
     function allTogether(){
         let dropdownMenu = d3.select('#selDataset');
@@ -51,6 +60,15 @@ d3.json(url).then(function(data){
         // console.log(id);
         // console.log(information.Name_year[id]);
         // plotter(numerical[0]);
+
+        if (get_scraped_img(information.Name_year[id]) != false) {
+            let web_div = document.getElementById('web');
+            img.src = "https://bmcnoldy.rsmas.miami.edu/" + get_scraped_img(information.Name_year[id]);
+            web_div.appendChild(img);
+        } else {
+            img.src="";
+        };
+
         demoInfo(information, id);
         createMap(information.Name_year[id], information.category[id]);
     }

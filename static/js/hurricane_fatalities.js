@@ -7,19 +7,19 @@ d3.json(death_url).then(function (data) {
         return b.Deaths - a.Deaths;
     });
 
-    console.log(sorteddeaths)
+    // console.log(sorteddeaths)
 
     //Slice out the top ten storms
     let slicedData = sorteddeaths.slice(0, 10).reverse();
 
 
-    console.log(slicedData)
+    // console.log(slicedData)
     let xresult = slicedData.map(a => a.NameYear);
     let yresult = slicedData.map(a => a.Deaths);
 
     // descriptive text to give context to chart bars
     let barText = slicedData.map(a => a.AreasAffected);
-    console.log(barText)
+    // console.log(barText)
 
     // Trace for Fatalities
     let trace7 = {

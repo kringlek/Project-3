@@ -9,9 +9,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="./../static/css/style.css">
 
-  <script language="javascript" type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.min.js"></script>
-  <script language="javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/addons/p5.sound.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.js"
+    integrity="sha512-+tu0+vUXyZX+S51npa//IN6znNTLZsBoy8mXn9WzHxfBqYMy6gOzzfTK0VqZf9O171RY9AJviHDokCnvEq8+1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/addons/p5.sound.js"
+    integrity="sha512-TU9AWtV5uUZPX8dbBAH8NQF1tSdigPRRT82vllAQ1Ke28puiqLA6ZVKxtUGlgrH6yWFnkKy+sE6luNEGH9ar0A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script language="javascript" type="text/javascript" src="./../static/js/sketch.js"></script>
 </head>
 
@@ -25,12 +29,17 @@
         <a href="/hurricane-selector" class="btn btn-primary btn-lg" role="button">Hurricane Data</a>
       </div>
     </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> 9ec06811947b02468f80728e316433225a414308
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-12 text-right">
+        <div id="sketch-holder">
+        </div>
+        </br>
+        </br>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 text-center">
         <div id="scatter1"></div>
       </div>
       <div class="col-md-6">
@@ -48,8 +57,6 @@
     <div class="row">
       <div class="col-md-12">
         <div id='scatter5'></div>
-<<<<<<< HEAD
-=======
         <p1>The graph above shows the months in which hurricanes devastate our country. As seen from the graph,
           September is the month most hurricanes are formed
         </p1>
@@ -57,7 +64,6 @@
         </br>
         </br>
         </br>
->>>>>>> 9ec06811947b02468f80728e316433225a414308
       </div>
     </div>
     <div class="row">
@@ -77,6 +83,12 @@
     <div class="row">
       <div class="col-md-12">
         <div id="cat4data"></div>
+        <p1>This bar chart shows the top ten hurricanes that had most fatalities (in red) compared to
+          and the damages (in billions of dollars) in blue. </p1>
+        </br>
+        </br>
+        </br>
+        </br>
       </div>
   </div>
 </div>
