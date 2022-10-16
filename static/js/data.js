@@ -19,7 +19,6 @@ d3.json(hurr_url).then(function(data) {
 
 d3.json(web_url).then(function(data) {
     scraped = data;
-    console.log(data);
 });
 
 

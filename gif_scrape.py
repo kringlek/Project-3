@@ -60,7 +60,7 @@ def scrape_gifs():
     gif_df = df[df['gif_url'].str.endswith('.gif')]
 
     # clean up df
-    gif_df = gif_df.drop_duplicates(subset=["hurricane"])
+    gif_df = gif_df.drop_duplicates(subset=["hurricane"], keep='last')
     gif_df = gif_df.reset_index(drop=True)
     gif_df["name"] = gif_df["hurricane"].str.slice(stop=-2)
     gif_df["name"] = gif_df["name"].str.capitalize()
