@@ -87,3 +87,6 @@ html {
     height: 20px;
     float: left;
 }
+#sketch-holder {
+    position: right 200px;
+     }
