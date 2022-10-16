@@ -17,7 +17,7 @@ function demoInfo(data2, key) {
     keys.splice(9,2);
     keys.splice(3,1);
     var values = Object.values(data2);
-    console.log(values);
+    // console.log(values);
     values.splice(9,2);
     values.splice(3,1);
     var ol = document.getElementById('metalist');
