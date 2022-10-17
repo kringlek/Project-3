@@ -7,3 +7,6 @@ In order to run the code, please download the file /font/Nosifer-Regular and ins
 https://www.kaggle.com/datasets/christinezinkand/storms?resource=download&select=storms_updated.csv
 
 https://www.nhc.noaa.gov/data/hurdat/hurdat2-1851-2021-041922.txt
+
+Brian McNoldy, Univ. of Miami, Rosenstiel School:
+https://bmcnoldy.rsmas.miami.edu/tropics/radar/
