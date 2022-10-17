@@ -69,7 +69,7 @@ d3.json(url).then(function(data){
             img.src="";
         };
 
-        demoInfo(information, id);
+        demoInfo(information, id, information.Name_year[id]);
         createMap(information.Name_year[id], information.category[id]);
     }
     init();

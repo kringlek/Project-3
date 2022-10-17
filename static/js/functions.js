@@ -10,16 +10,20 @@ function getAllIndexes(arr, val) {
             indexes.push(i);
     return indexes;
 };
-function demoInfo(data2, key) {
+function demoInfo(data2, key, hurricane) {
     var keys = Object.keys(data2);
     keys[5] = 'Wind Speed Max (knots)';
     keys[11] = 'Maximum Category';
-    keys.splice(9,2);
-    keys.splice(3,1);
+    // keys.splice(9,2);
+    // keys.splice(3,1);
+    keys.splice(9,3);
+    keys.splice(2,4);
     var values = Object.values(data2);
     // console.log(values);
-    values.splice(9,2);
-    values.splice(3,1);
+    // values.splice(9,2);
+    // values.splice(3,1);
+    values.splice(9,3);
+    values.splice(2,4);
     var ol = document.getElementById('metalist');
     var listy = document.getElementById('metalist');
     listy.innerHTML = '';
@@ -28,18 +32,39 @@ function demoInfo(data2, key) {
         li.innerText=`${keys[i]}: ${values[i][key]}`;
         // console.log(values[i][0]);
         ol.appendChild(li);
-    }};
+    }
+    let li = document.createElement('li');
+    console.log(key);
+    li.innerText=`Start Date: ${getStartDate(hurricane)}`;
+    ol.appendChild(li);
+    li = document.createElement('li');
+    li.innerText=`End Date: ${getEndDate(hurricane)}`;
+    ol.appendChild(li);
+    li = document.createElement('li');
+    li.innerText=`Maximum Category: ${getMaxCat(hurricane)}`;
+    ol.appendChild(li);
+    li = document.createElement('li');
+    li.innerText=`Maximum Wind Speed (knots): ${getMaxWind(hurricane)}`;
+    ol.appendChild(li);};
+var keys
 
 function startInfo(data3) {
     // console.log(data3);
+    // testing = data3;
     var keys = Object.keys(data3);
+    // keys = Object.keys(data3);
+    // testing = keys;
     keys[5] = 'Wind Speed Max';
     keys[11] = 'Maximum Category';
-    keys.splice(9,2);
-    keys.splice(3,1);
+    // keys.splice(9,2);
+    // keys.splice(3,1);
+    keys.splice(9,3);
+    keys.splice(2,4);
     var values = Object.values(data3);
-    values.splice(9,2);
-    values.splice(3,1);
+    // values.splice(9,2);
+    // values.splice(3,1);
+    values.splice(9,3);
+    values.splice(2,4);
     var ol = document.getElementById('metalist');
     var listy = document.getElementById('metalist');
     listy.innerHTML = '';
@@ -48,7 +73,20 @@ function startInfo(data3) {
         li.innerText=`${keys[i]}: ${values[i][0]}`;
         // console.log(values[i][0]);
         ol.appendChild(li);
-    }};
+    };
+    let li = document.createElement('li');
+    li.innerText=`Start Date: ${getStartDate('Janet 1955')}`;
+    ol.appendChild(li);
+    li = document.createElement('li');
+    li.innerText=`End Date: ${getEndDate('Janet 1955')}`;
+    ol.appendChild(li);
+    li = document.createElement('li');
+    li.innerText=`Maximum Category: ${getMaxCat('Janet 1955')}`;
+    ol.appendChild(li);
+    li = document.createElement('li');
+    li.innerText=`Maximum Wind Speed (knots): ${getMaxWind('Janet 1955')}`;
+    ol.appendChild(li);
+};
 
 function plotter(data) {
     var wind = Object.values(data['Wind Speed (mph)']);
