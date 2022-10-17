@@ -1,4 +1,4 @@
-const url = './../static/js/test.json'
+const url = './../static/js/hurricane.json'
 const caturl = './../static/js/category.json'
 const hurr_url = './../static/js/hurricane_path.json'
 const web_url = './../static/js/gif_scrape.json'
