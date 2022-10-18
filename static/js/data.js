@@ -29,22 +29,17 @@ d3.json(url).then(function(data){
     information = data;
     test = information.Name;
     test2 = Object.keys(test);
-    // console.log(information);
     names = information.Name_year;
     years = information.Year;
-    // for (let i =0; i < test2.length; i++){
-    //     console.log(test[i]);
-    // }
+
     function init(){
         let inital = information;
         createInitMap();
         startInfo(inital);
         plotter(information);
     };
-    // demoInfo(data);
     let nameArr = Object.values(names);
     let filterednames = [...new Set(nameArr)];
-    // let yearArr = Object.values(years);
     var selctor = document.getElementById('selDataset');
     for (let i=0; i< filterednames.length; i++){
         let option = document.createElement('option');
@@ -57,9 +52,6 @@ d3.json(url).then(function(data){
         let dropdownMenu = d3.select('#selDataset');
         let dataset = dropdownMenu.property('value');
         let id = getKeyByValue(information.Name_year, dataset);
-        // console.log(id);
-        // console.log(information.Name_year[id]);
-        // plotter(numerical[0]);
 
         if (get_scraped_img(information.Name_year[id]) != false) {
             let web_div = document.getElementById('web');

@@ -37,24 +37,20 @@ def scrape_gifs():
     href_array = []
     hurricanes = []
     for link in soup.find_all('a', attrs={'href': re.compile("^tropics")}):
-        # print(link)
+
         href_link = link.get('href')
-        # print(href_link)
         
         for hurricane in hurricane_data:
             hurricane_link = "tropics/" + hurricane
             if href_link.startswith(hurricane_link):
-                # print()
+
                 href_array.append(href_link)
                 hurricanes.append(hurricane)
         
         
-        # print(href_array)
-
     df = pd.DataFrame({'hurricane': hurricanes,
                         'gif_url': href_array})
-    # print(len(df.index))
-    # print(df.head())
+
 
     # if WHATEVER does not end in '.gif' drop from array
     gif_df = df[df['gif_url'].str.endswith('.gif')]
@@ -70,50 +66,11 @@ def scrape_gifs():
 
     final_df = gif_df[["gif_url", "id"]]
 
-    # print(gif_df.head())
-    # print(len(gif_df.index))
     
     final_df.to_json('static/js/gif_scrape.json')
 
-    # print(gif_df)
-
     # browser.quit()
 
-    # for gif in href_array:
-    #     gif_name = gif.split('/')
-    #     gif_name_list = (re.split(nums, gif_name[1]))
-    #     # print(gif_name_list)
-
-    #     joined_names = ' '.join(gif_name_list).split()
-
-    #     def clean_gif_names(x):
-    #         return list(dict.fromkeys(x))
-        
-    #     cleaned_names = clean_gif_names(joined_names)
-
-    #     print(cleaned_names)
-
-    # final_series=pd.Series(cleaned_names)
-    # myFinalList = pd.unique(final_series).tolist()
-    # print(myFinalList)
-    # print(href_array)
-    
-        # clean_gif_name = gif_name[1]
-        # print(clean_gif_name)
-
-    # print(good_gifs)
 
 
 scrape_gifs()
-
-
-# filter out name of hurricane from gif href url to be able to match to your data
-# remove multiples of the same hurricanes
-# concat page url with gif href
-# append/join hurricane gifs to data set
-
-# inside for loop create another for loop to remove empty strings from the results
-# first append each gir_name_list into a list of lists for the for loop
-# then run code inside that for loop that removes empty strings
-# remove duplicate names from the list
-# match name with hurricane gif url dropping any unmatched results

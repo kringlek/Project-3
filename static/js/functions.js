@@ -14,14 +14,9 @@ function demoInfo(data2, key, hurricane) {
     var keys = Object.keys(data2);
     keys[5] = 'Wind Speed Max (knots)';
     keys[11] = 'Maximum Category';
-    // keys.splice(9,2);
-    // keys.splice(3,1);
     keys.splice(9,3);
     keys.splice(2,4);
     var values = Object.values(data2);
-    // console.log(values);
-    // values.splice(9,2);
-    // values.splice(3,1);
     values.splice(9,3);
     values.splice(2,4);
     var ol = document.getElementById('metalist');
@@ -30,7 +25,6 @@ function demoInfo(data2, key, hurricane) {
     for (let i = 0; i < keys.length -1; i++) {
         let li = document.createElement('li');
         li.innerText=`${keys[i]}: ${values[i][key]}`;
-        // console.log(values[i][0]);
         ol.appendChild(li);
     }
     let li = document.createElement('li');
@@ -46,23 +40,14 @@ function demoInfo(data2, key, hurricane) {
     li = document.createElement('li');
     li.innerText=`Maximum Wind Speed (knots): ${getMaxWind(hurricane)}`;
     ol.appendChild(li);};
-var keys
 
 function startInfo(data3) {
-    // console.log(data3);
-    // testing = data3;
     var keys = Object.keys(data3);
-    // keys = Object.keys(data3);
-    // testing = keys;
     keys[5] = 'Wind Speed Max';
     keys[11] = 'Maximum Category';
-    // keys.splice(9,2);
-    // keys.splice(3,1);
     keys.splice(9,3);
     keys.splice(2,4);
     var values = Object.values(data3);
-    // values.splice(9,2);
-    // values.splice(3,1);
     values.splice(9,3);
     values.splice(2,4);
     var ol = document.getElementById('metalist');
@@ -71,7 +56,6 @@ function startInfo(data3) {
     for (let i = 0; i < keys.length -1; i++) {
         let li = document.createElement('li');
         li.innerText=`${keys[i]}: ${values[i][0]}`;
-        // console.log(values[i][0]);
         ol.appendChild(li);
     };
     let li = document.createElement('li');
