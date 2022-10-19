@@ -10,3 +10,5 @@ https://www.nhc.noaa.gov/data/hurdat/hurdat2-1851-2021-041922.txt
 
 Brian McNoldy, Univ. of Miami, Rosenstiel School:
 https://bmcnoldy.rsmas.miami.edu/tropics/radar/
+ 
+To calculate hurricane damages in today's USD (adjusted for inflation) https://www.measuringworth.com/datasets/uscpi/result.php
