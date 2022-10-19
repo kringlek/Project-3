@@ -7,27 +7,27 @@ d3.json(most_fatalities_url).then(function (data) {
         return b.Deaths - a.Deaths;
     });
 
-    // console.log(sortedfatalities)
+    console.log(sortedfatalities)
 
 
     //Slice out the top ten storms
     let slicedData = sortedfatalities.slice(0, 10);
 
 
-    // console.log(slicedData)
+    console.log(slicedData)
     let xresult = slicedData.map(a => a.NameYear);
     let yresult = slicedData.map(a => a.Deaths);
 
     // descriptive text to give context to chart bars
     let barText = slicedData.map(a => a.AreasAffected);
-    // console.log(barText)
+    console.log(barText)
 
     //prepare xaxis for fatalities
     let y2result = slicedData.map(a => a.Damage);
-    // console.log(y2result)
+    console.log(y2result)
 
     let barText2 = slicedData.map(a => a.Damage);
-    // console.log(barText2)
+    console.log(barText2)
 
     // Trace1 for Damages 
     let trace81 = {

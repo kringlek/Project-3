@@ -4,11 +4,11 @@ const most_damaged_url = "./../static/js/storms.json";
 d3.json(most_damaged_url).then(function (data) {
 
     // sort the storm dataset in descending order
-    let sorteddamages = data.sort(function (a, b) {
+    let sorteddamages = data.sort(function (a, b){
         return b.Damage - a.Damage;
     });
 
-    // console.log(sorteddamages)
+    console.log(sorteddamages)
 
 
     //Slice out the top ten storms
@@ -26,14 +26,14 @@ d3.json(most_damaged_url).then(function (data) {
 
     // descriptive text to give context to chart bars
     let barText = slicedData.map(a => a.AreasAffected);
-    // console.log(barText)
+    console.log(barText)
 
     //prepare xaxis for fatalities
     let y2result = slicedData.map(a => a.Deaths);
-    // console.log(y2result)
+     console.log(y2result)
 
     let barText2 = slicedData.map(a => a.Deaths);
-    // console.log(barText2)
+     console.log(barText2)
 
     // Trace1 for Damages 
     let trace61 = {
@@ -64,7 +64,7 @@ d3.json(most_damaged_url).then(function (data) {
         hoverinfo: 'none',
         showlegend: false
     };
-    
+
     let trace64 = {
         x: xresult,
         y: [0],
@@ -83,7 +83,7 @@ d3.json(most_damaged_url).then(function (data) {
         title: {
             text: "Top 10 Hurricanes by Damages and Their Fatalities"
         },
-        
+
         xaxis: {
             text: "Storm Name & Year"
         },
@@ -102,7 +102,7 @@ d3.json(most_damaged_url).then(function (data) {
             t: 100,
             b: 100
         },
-        barmode:'group'
+        barmode: 'group'
     };
 
     // Render the plot to the div tag 
